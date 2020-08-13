@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>简单实现Node的Events模块</title>
-    <url>/2020/07/02/Node-Events/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>面试题汇总</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>判断js类型的方式</title>
     <url>/2020/05/26/Javascript_type/</url>
     <content><![CDATA[<h3 id="第一种方式：typeof"><a href="#第一种方式：typeof" class="headerlink" title="第一种方式：typeof"></a>第一种方式：typeof</h3><p><strong>【语法】</strong></p>
@@ -99,35 +85,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue-lifecycle</title>
-    <url>/2020/07/09/Vue-lifecycle/</url>
-    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
-<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
-<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
-<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
-<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
-<p>mounted // 调用该生命周期前已渲染真实节点</p>
-<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
-<p>updated // 已调用render函数重新渲染</p>
-<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
-<p>deactivated // keep-alive缓存组件销毁后调用</p>
-<p>beforeDestroy</p>
-<p>destroyed</p>
-<p>errorCaptured</p>
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给出一个区间的集合，请合并所有重叠的区间。</title>
-    <url>/2020/07/02/arithmetic-gather/</url>
-    <content><![CDATA[<p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">        [<span class="number">1</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">2</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">8</span>, <span class="number">10</span>],</span><br><span class="line">        [<span class="number">15</span>, <span class="number">18</span>],</span><br><span class="line">      ];</span><br><span class="line"></span><br><span class="line">        arr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="keyword">const</span> a2 = arr[i][<span class="number">1</span>],</span><br><span class="line">            b1 = arr[i + <span class="number">1</span>][<span class="number">0</span>],</span><br><span class="line">            b2 = arr[i + <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">          <span class="keyword">if</span> (a2 &gt;= b1) &#123;</span><br><span class="line">            arr[i][<span class="number">1</span>] = a2 &gt; b2 ? a2 : b2;</span><br><span class="line">            arr.splice(i + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">            i--;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// let tempMin = [];</span></span><br><span class="line">      <span class="comment">// let tempMax = [];</span></span><br><span class="line">      <span class="comment">// let temp = [];</span></span><br><span class="line">      <span class="comment">// let item = arr.map((data) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   let min = Math.min(...data);</span></span><br><span class="line">      <span class="comment">//   tempMin.push(min);</span></span><br><span class="line">      <span class="comment">//   let max = Math.max(...data);</span></span><br><span class="line">      <span class="comment">//   tempMax.push(max);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// for (let i = 0; i &lt; tempMin.length; i++) &#123;</span></span><br><span class="line">      <span class="comment">//   if (tempMin[i + 1] &lt;= tempMax[i]) &#123;</span></span><br><span class="line">      <span class="comment">//     tempMin.splice(tempMin[i], 1);</span></span><br><span class="line">      <span class="comment">//     tempMax.splice(tempMax[i-1], 1);</span></span><br><span class="line">      <span class="comment">//     i--;</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// tempMin.map((data, index) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   temp.push([data, tempMax[index]]);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// console.log(temp);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//仅匹配没有连续相同项的数组</span></span><br><span class="line">      <span class="comment">// let all = []</span></span><br><span class="line">      <span class="comment">// let show = false</span></span><br><span class="line">      <span class="comment">// for(let i = 0; i &lt; arr.length; i ++)&#123;</span></span><br><span class="line">      <span class="comment">//   if(show) &#123;</span></span><br><span class="line">      <span class="comment">//     show = false</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   if(arr[i+1] &amp;&amp; arr[i][1] &gt;= arr[i+1][0]) &#123;</span></span><br><span class="line">      <span class="comment">//     all.push([arr[i][0], arr[i+1][1]])</span></span><br><span class="line">      <span class="comment">//     show = true</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   all.push(arr[i])</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// console.log(all)</span></span><br></pre></td></tr></table></figure>
+    <title>简单实现Node的Events模块</title>
+    <url>/2020/07/02/Node-Events/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -150,30 +110,40 @@
       </tags>
   </entry>
   <entry>
-    <title>html/css</title>
-    <url>/2020/05/21/htm&amp;css_1/</url>
-    <content><![CDATA[<h2 id="1-flex-0-1-auto-表示什么意思"><a href="#1-flex-0-1-auto-表示什么意思" class="headerlink" title="1. flex: 0 1 auto 表示什么意思"></a>1. flex: 0 1 auto 表示什么意思</h2><p>​        flex: 0 1 auto 其实就是弹性盒子的默认值，表示 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，分别表示放大比例、缩小比例、分配多余空间之前占据的主轴空间.</p>
-<p>​        1.flex-grow属性定义项目的放大比例，默认为零，即如果存在剩余空间，也不放大。</p>
-<p>​        2.flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
-<p>​        3.flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间，如果设置了width，则跟随width，如果没有设置width，则为内容实际宽度。</p>
+    <title>给出一个区间的集合，请合并所有重叠的区间。</title>
+    <url>/2020/07/02/arithmetic-gather/</url>
+    <content><![CDATA[<p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">        [<span class="number">1</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">2</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">8</span>, <span class="number">10</span>],</span><br><span class="line">        [<span class="number">15</span>, <span class="number">18</span>],</span><br><span class="line">      ];</span><br><span class="line"></span><br><span class="line">        arr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="keyword">const</span> a2 = arr[i][<span class="number">1</span>],</span><br><span class="line">            b1 = arr[i + <span class="number">1</span>][<span class="number">0</span>],</span><br><span class="line">            b2 = arr[i + <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">          <span class="keyword">if</span> (a2 &gt;= b1) &#123;</span><br><span class="line">            arr[i][<span class="number">1</span>] = a2 &gt; b2 ? a2 : b2;</span><br><span class="line">            arr.splice(i + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">            i--;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// let tempMin = [];</span></span><br><span class="line">      <span class="comment">// let tempMax = [];</span></span><br><span class="line">      <span class="comment">// let temp = [];</span></span><br><span class="line">      <span class="comment">// let item = arr.map((data) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   let min = Math.min(...data);</span></span><br><span class="line">      <span class="comment">//   tempMin.push(min);</span></span><br><span class="line">      <span class="comment">//   let max = Math.max(...data);</span></span><br><span class="line">      <span class="comment">//   tempMax.push(max);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// for (let i = 0; i &lt; tempMin.length; i++) &#123;</span></span><br><span class="line">      <span class="comment">//   if (tempMin[i + 1] &lt;= tempMax[i]) &#123;</span></span><br><span class="line">      <span class="comment">//     tempMin.splice(tempMin[i], 1);</span></span><br><span class="line">      <span class="comment">//     tempMax.splice(tempMax[i-1], 1);</span></span><br><span class="line">      <span class="comment">//     i--;</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// tempMin.map((data, index) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   temp.push([data, tempMax[index]]);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// console.log(temp);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//仅匹配没有连续相同项的数组</span></span><br><span class="line">      <span class="comment">// let all = []</span></span><br><span class="line">      <span class="comment">// let show = false</span></span><br><span class="line">      <span class="comment">// for(let i = 0; i &lt; arr.length; i ++)&#123;</span></span><br><span class="line">      <span class="comment">//   if(show) &#123;</span></span><br><span class="line">      <span class="comment">//     show = false</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   if(arr[i+1] &amp;&amp; arr[i][1] &gt;= arr[i+1][0]) &#123;</span></span><br><span class="line">      <span class="comment">//     all.push([arr[i][0], arr[i+1][1]])</span></span><br><span class="line">      <span class="comment">//     show = true</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   all.push(arr[i])</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// console.log(all)</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>前端面试题</category>
-        <category>html/css</category>
+        <category>面试题汇总</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
       </tags>
   </entry>
   <entry>
-    <title>手写一个localStorage</title>
-    <url>/2020/07/02/localStorage/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStorage</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.prefix = <span class="string">'pro_'</span>;</span><br><span class="line">    <span class="keyword">this</span>.storage = <span class="built_in">window</span>.localStorage;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// exp/秒，默认 60 * 60 * 24 = 1 天</span></span><br><span class="line">  <span class="keyword">set</span>(key, value, exp = 60 * 60 * 24) &#123;</span><br><span class="line">    <span class="keyword">const</span> timestamp = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">const</span> data = <span class="built_in">JSON</span>.stringify(&#123; value, exp, timestamp &#125;);</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.setItem(prefixKey, data);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">this</span>.storage.getItem(prefixKey);</span><br><span class="line">    <span class="keyword">if</span> (!data) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    data = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    <span class="keyword">const</span> exp = data.exp * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">const</span> &#123; timestamp &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> dataNow = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">if</span> (dataNow &gt; timestamp + exp) &#123;</span><br><span class="line">      <span class="keyword">this</span>.delete(key);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.removeItem(prefixKey);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> MyStorage;</span><br></pre></td></tr></table></figure>
-
+    <title>Vue-lifecycle</title>
+    <url>/2020/07/09/Vue-lifecycle/</url>
+    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
+<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
+<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
+<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
+<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
+<p>mounted // 调用该生命周期前已渲染真实节点</p>
+<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
+<p>updated // 已调用render函数重新渲染</p>
+<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
+<p>deactivated // keep-alive缓存组件销毁后调用</p>
+<p>beforeDestroy</p>
+<p>destroyed</p>
+<p>errorCaptured</p>
 ]]></content>
       <categories>
         <category>前端面试题</category>
-        <category>面试题汇总</category>
+        <category>Vue</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
@@ -251,6 +221,41 @@
       <tags>
         <tag>微信小程序</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>手写一个localStorage</title>
+    <url>/2020/07/02/localStorage/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStorage</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.prefix = <span class="string">'pro_'</span>;</span><br><span class="line">    <span class="keyword">this</span>.storage = <span class="built_in">window</span>.localStorage;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// exp/秒，默认 60 * 60 * 24 = 1 天</span></span><br><span class="line">  <span class="keyword">set</span>(key, value, exp = 60 * 60 * 24) &#123;</span><br><span class="line">    <span class="keyword">const</span> timestamp = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">const</span> data = <span class="built_in">JSON</span>.stringify(&#123; value, exp, timestamp &#125;);</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.setItem(prefixKey, data);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">this</span>.storage.getItem(prefixKey);</span><br><span class="line">    <span class="keyword">if</span> (!data) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    data = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    <span class="keyword">const</span> exp = data.exp * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">const</span> &#123; timestamp &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> dataNow = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">if</span> (dataNow &gt; timestamp + exp) &#123;</span><br><span class="line">      <span class="keyword">this</span>.delete(key);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.removeItem(prefixKey);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> MyStorage;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>面试题汇总</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html/css</title>
+    <url>/2020/05/21/htm&amp;css_1/</url>
+    <content><![CDATA[<h2 id="1-flex-0-1-auto-表示什么意思"><a href="#1-flex-0-1-auto-表示什么意思" class="headerlink" title="1. flex: 0 1 auto 表示什么意思"></a>1. flex: 0 1 auto 表示什么意思</h2><p>​        flex: 0 1 auto 其实就是弹性盒子的默认值，表示 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，分别表示放大比例、缩小比例、分配多余空间之前占据的主轴空间.</p>
+<p>​        1.flex-grow属性定义项目的放大比例，默认为零，即如果存在剩余空间，也不放大。</p>
+<p>​        2.flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<p>​        3.flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间，如果设置了width，则跟随width，如果没有设置width，则为内容实际宽度。</p>
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>html/css</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2020/08/13/test/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>

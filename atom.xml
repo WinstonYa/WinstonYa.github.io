@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://winstonya.github.io/"/>
-  <updated>2020-08-13T09:51:44.624Z</updated>
+  <updated>2020-08-13T10:37:27.944Z</updated>
   <id>https://winstonya.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://winstonya.github.io/2020/08/13/test/"/>
+    <id>https://winstonya.github.io/2020/08/13/test/</id>
+    <published>2020-08-13T10:37:27.000Z</published>
+    <updated>2020-08-13T10:37:27.944Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>specification</title>
