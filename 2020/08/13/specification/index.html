@@ -133,7 +133,7 @@
 <meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/router.png">
 <meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/views.png">
 <meta property="article:published_time" content="2020-08-13T08:31:34.000Z">
-<meta property="article:modified_time" content="2020-08-13T10:50:19.689Z">
+<meta property="article:modified_time" content="2020-08-13T10:54:48.950Z">
 <meta property="article:author" content="Winston Wong">
 <meta property="article:tag" content="前端风格规范">
 <meta name="twitter:card" content="summary">
@@ -485,29 +485,17 @@
 <ol>
 <li><p>Check the features needed for your project：</p>
 </li>
-<li><ol>
-<li>Babel</li>
-</ol>
+<li><p>Babel</p>
 </li>
-<li><ol>
-<li>Router</li>
-</ol>
+<li><p>Router</p>
 </li>
-<li><ol>
-<li>Vuex</li>
-</ol>
+<li><p>Vuex</p>
 </li>
-<li><ol>
-<li>CSS Pre-processors</li>
-</ol>
+<li><p>CSS Pre-processors</p>
 </li>
-<li><ol>
-<li>Linter / Formatter</li>
-</ol>
+<li><p>Linter / Formatter</p>
 </li>
-<li><ol>
-<li>Unit Testing</li>
-</ol>
+<li><p>Unit Testing</p>
 </li>
 <li><p>Use history mode for router?         Y</p>
 </li>
@@ -637,10 +625,10 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> standalone=<span class="string">"no"</span>?&gt;&lt;!DOCTYPE svg PUBLIC <span class="string">"-//W3C//DTD SVG 1.1//EN"</span> <span class="string">"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">t</span>=<span class="string">"1583823818343"</span> <span class="attr">class</span>=<span class="string">"icon"</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">version</span>=<span class="string">"1.1"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">p-id</span>=<span class="string">"14478"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"200"</span>&gt;</span><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M908.864 206.656c-11.52-12.096-24.768-18.432-39.872-19.072h-10.88c-38.08 6.08-71.36 11.968-99.776 17.664-28.416 5.76-51.392 11.648-68.928 17.664-14.528 2.432-34.624 9.536-60.288 21.312-25.728 11.776-55.744 27.648-90.24 47.616-17.536 6.08-35.072 6.08-52.608 0-35.072-16.896-65.024-31.424-89.792-43.52l-55.296-25.408c-19.968-6.016-43.84-11.904-71.616-17.664-27.84-5.76-61.952-11.648-102.464-17.664h-11.776c-17.536 0.64-31.424 6.976-41.728 19.072-10.304 12.096-15.744 27.2-16.32 45.312v440.704c0.576 15.104 5.76 28.736 15.424 40.832 9.664 12.096 22.08 19.648 37.184 22.656 40.512 6.016 76.48 12.864 107.904 20.416 31.424 7.552 57.408 14.336 78.016 20.416l59.84 23.552c25.408 9.664 55.616 23.296 90.688 40.832 17.536 5.44 35.072 5.44 52.608 0 34.432-17.536 64.512-31.872 90.24-43.072 25.664-11.2 45.824-18.304 60.288-21.312 20.544-5.44 46.528-11.52 78.016-18.112l107.904-22.656c14.528-3.008 26.752-9.984 36.736-20.864 9.984-10.88 14.976-25.088 14.976-42.624V251.968c-0.704-18.112-6.72-33.216-18.24-45.312z m-364.48 472.768c0 15.872-14.464 28.928-32.128 28.928s-32.128-12.992-32.128-28.928V433.856c0-15.872 14.464-28.928 32.128-28.928s32.128 12.992 32.128 28.928v245.568z"</span> <span class="attr">p-id</span>=<span class="string">"14479"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>修改 src 目录下的 main.js 文件，全局引用：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">import</span> IconSvg <span class="keyword">from</span> <span class="string">"./plugins/icons"</span>;</span><br><span class="line"><span class="number">2</span> Vue.use(IconSvg);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> IconSvg <span class="keyword">from</span> <span class="string">"./plugins/icons"</span>;</span><br><span class="line">Vue.use(IconSvg);</span><br></pre></td></tr></table></figure>
 
 <p>使用方法：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;icon-svg</span><br><span class="line"><span class="number">2</span>  svg-<span class="class"><span class="keyword">class</span></span>=<span class="string">"homework-svg-class"</span>    <span class="comment">// 可选，给对应的 svg 设 class 类名</span></span><br><span class="line"><span class="number">3</span>  svg-name=<span class="string">"homework"</span>    <span class="comment">// 必选，svg 对应的文件名称（@/plugins/icons/svg目录下）</span></span><br><span class="line"><span class="number">4</span> &gt;</span><br><span class="line"><span class="number">5</span> &lt;<span class="regexp">/icon-svg&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;icon-svg</span><br><span class="line"> svg-<span class="class"><span class="keyword">class</span></span>=<span class="string">"homework-svg-class"</span>    <span class="comment">// 可选，给对应的 svg 设 class 类名</span></span><br><span class="line"> svg-name=<span class="string">"homework"</span>    <span class="comment">// 必选，svg 对应的文件名称（@/plugins/icons/svg目录下）</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;<span class="regexp">/icon-svg&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="4、vue-i18n"><a href="#4、vue-i18n" class="headerlink" title="4、vue-i18n"></a>4、vue-i18n</h3><p>下载依赖包：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-i18n</span><br></pre></td></tr></table></figure>
@@ -652,7 +640,7 @@
 
 
 <p>@/locales/项目名/支持语言的 json 格式文件（en-US.json、zh-CN.json、fr-FR.json）：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &#123;</span><br><span class="line"><span class="number">2</span>  <span class="string">"key"</span>: <span class="string">"value"</span></span><br><span class="line"><span class="number">3</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"key"</span>: <span class="string">"value"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在 main.js 中引入 i18n：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App.vue"</span>;</span><br><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"./locales/i18n"</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">"element-ui"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"element-ui/lib/theme-chalk/index.css"</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI, &#123; <span class="attr">i18n</span>: <span class="function">(<span class="params">key, value</span>) =&gt;</span> i18n.t(key, value) &#125;); <span class="comment">//引入i18n</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  i18n,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(<span class="string">"#app"</span>);</span><br></pre></td></tr></table></figure>
@@ -661,7 +649,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123; info &#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;&#123;&#123; $t("key.value") &#125;&#125;&lt;/</span>div&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      info: <span class="keyword">this</span>.$i18n.t(<span class="string">"key.value"</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在 vue 实例外使用：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"@/locales/i18n"</span>;</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span> i18n.t(<span class="string">"key.value"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"@/locales/i18n"</span>;</span><br><span class="line"></span><br><span class="line">i18n.t(<span class="string">"key.value"</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、axios"><a href="#5、axios" class="headerlink" title="5、axios"></a>5、axios</h3><p><a href="https://github.com/axios/axios" target="_blank" rel="noopener">github 传送门</a></p>
 <p>下载依赖包：</p>
