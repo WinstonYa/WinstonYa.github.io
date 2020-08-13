@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>简单实现Node的Events模块</title>
+    <url>/2020/07/02/Node-Events/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>面试题汇总</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>判断js类型的方式</title>
     <url>/2020/05/26/Javascript_type/</url>
     <content><![CDATA[<h3 id="第一种方式：typeof"><a href="#第一种方式：typeof" class="headerlink" title="第一种方式：typeof"></a>第一种方式：typeof</h3><p><strong>【语法】</strong></p>
@@ -85,14 +99,25 @@
       </tags>
   </entry>
   <entry>
-    <title>简单实现Node的Events模块</title>
-    <url>/2020/07/02/Node-Events/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
-
+    <title>Vue-lifecycle</title>
+    <url>/2020/07/09/Vue-lifecycle/</url>
+    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
+<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
+<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
+<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
+<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
+<p>mounted // 调用该生命周期前已渲染真实节点</p>
+<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
+<p>updated // 已调用render函数重新渲染</p>
+<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
+<p>deactivated // keep-alive缓存组件销毁后调用</p>
+<p>beforeDestroy</p>
+<p>destroyed</p>
+<p>errorCaptured</p>
 ]]></content>
       <categories>
         <category>前端面试题</category>
-        <category>面试题汇总</category>
+        <category>Vue</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
@@ -126,31 +151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue-lifecycle</title>
-    <url>/2020/07/09/Vue-lifecycle/</url>
-    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
-<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
-<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
-<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
-<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
-<p>mounted // 调用该生命周期前已渲染真实节点</p>
-<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
-<p>updated // 已调用render函数重新渲染</p>
-<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
-<p>deactivated // keep-alive缓存组件销毁后调用</p>
-<p>beforeDestroy</p>
-<p>destroyed</p>
-<p>errorCaptured</p>
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给出一个区间的集合，请合并所有重叠的区间。</title>
     <url>/2020/07/02/arithmetic-gather/</url>
     <content><![CDATA[<p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
@@ -174,6 +174,74 @@
       <categories>
         <category>前端面试题</category>
         <category>面试题汇总</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>
+    <url>/2020/05/23/question-1/</url>
+    <content><![CDATA[<ul>
+<li><p>先看一下<strong>map</strong>的语法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// Return element for new_array </span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<p><strong>callback</strong>生成新数组元素的函数，使用三个参数：</p>
+<ul>
+<li><p><strong>currentValue</strong>：callback数组正在处理的当前元素。</p>
+</li>
+<li><p><strong>index</strong> （可选）：callback数组中正在处理的当前元素的索引。</p>
+</li>
+<li><p><strong>array</strong>（可选）：map方法调用的数组。</p>
+</li>
+<li><p><strong>thisArg</strong>（可选）：执行callback函数时值被用作this。</p>
+</li>
+</ul>
+<p><strong>返回值</strong>：回调函数的结果组成了一个新的数组。</p>
+</li>
+<li><h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>parseInt()函数解析一个字符串参数，并返回一个指定基数的整数(数学系统的基础)。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>string</code>要被解析的值。如果参数不是一个字符串，则将其转换为字符串（使用ToString抽象操作）。字符串开头的空白符将会被忽略。</p>
+</li>
+<li><p><code>radix</code>表示要解析的数字的基数。该值介于 2 ~ 36 之间。</p>
+<p>如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。</p>
+<p>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>  在<code>radix</code>为 undefined，或者<code>radix</code>为 0 或者没有指定的情况下，JavaScript 作如下处理：</p>
+<ul>
+<li><p>如果字符串 string 以”0x”或者”0X”开头, 则基数是16 (16进制).</p>
+</li>
+<li><p>如果字符串 string 以”0”开头, 基数是8（八进制）或者10（十进制），那么具体是哪个基数由实现环境决定。ECMAScript 5 规定使用10，但是并不是所有的浏览器都遵循这个规定。因此，永远都要明确给出radix参数的值。</p>
+</li>
+<li><p>如果字符串 string 以其它任何值开头，则基数是10 (十进制)。</p>
+</li>
+</ul>
+<p>  例子：parseInt(“444”,16) 表示将16进制的444转换成10进制的数，结果为1092。</p>
+<h2 id="本题解析："><a href="#本题解析：" class="headerlink" title="本题解析："></a>本题解析：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
+
+<p>实际执行代码为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">data,index</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(data,index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>返回值为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>,<span class="number">0</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>) <span class="comment">// NaN, 3&gt;2,因此3不是2进制数</span></span><br></pre></td></tr></table></figure>
+
+<p>所以本题答案：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [1,NaN,NaN]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>扩展题</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [10,NaN,2,3,4]</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">2</span>) <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">3</span>) <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">4</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>javascript基础</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
@@ -395,7 +463,7 @@
 <h3 id="2、nprogress"><a href="#2、nprogress" class="headerlink" title="2、nprogress"></a>2、nprogress</h3><p>下载依赖包：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yarn add nprogress</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://github.com/rstacruz/nprogress" target="_blank" rel="noopener">github 传送门</a>，使用方法详见 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#7GI050" target="_blank" rel="noopener">router</a>。</p>
+<p><a href="https://github.com/rstacruz/nprogress" target="_blank" rel="noopener">github 传送门</a></p>
 <h3 id="3、svg-sprite-loader"><a href="#3、svg-sprite-loader" class="headerlink" title="3、svg-sprite-loader"></a>3、svg-sprite-loader</h3><p>下载依赖包：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yarn add -D svg-sprite-loader</span><br></pre></td></tr></table></figure>
 
@@ -482,7 +550,7 @@
 <p>面包屑 BreadCrumb.vue 组件参考：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"breadcrumb-section"</span>&gt;</span><br><span class="line">    &lt;el-breadcrumb</span><br><span class="line">      <span class="class"><span class="keyword">class</span></span>=<span class="string">"breadcrumb-list"</span></span><br><span class="line">      v-<span class="keyword">if</span>=<span class="string">"breadcrumbValue.length"</span></span><br><span class="line">      separator-<span class="class"><span class="keyword">class</span></span>=<span class="string">"el-icon-arrow-right"</span></span><br><span class="line">    &gt;</span><br><span class="line">      &lt;template v-<span class="keyword">for</span>=<span class="string">"(item, index) in breadcrumbValue"</span>&gt;</span><br><span class="line">        &lt;el-breadcrumb-item</span><br><span class="line">          v-<span class="keyword">if</span>=<span class="string">"item.to"</span></span><br><span class="line">          :to=<span class="string">"item.to"</span></span><br><span class="line">          :key=<span class="string">"index"</span></span><br><span class="line">          :replace=<span class="string">"true"</span></span><br><span class="line">          &gt;&#123;&#123; item.name &#125;&#125;&lt;<span class="regexp">/el-breadcrumb-item</span></span><br><span class="line"><span class="regexp">        &gt;</span></span><br><span class="line"><span class="regexp">        &lt;el-breadcrumb-item v-else :key="item.name"&gt;&#123;&#123;</span></span><br><span class="line"><span class="regexp">          item.name</span></span><br><span class="line"><span class="regexp">        &#125;&#125;&lt;/</span>el-breadcrumb-item&gt;</span><br><span class="line">      &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>el-breadcrumb&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    breadcrumb: &#123;</span><br><span class="line">      type: <span class="built_in">Array</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="function"><span class="params">()</span> =&gt;</span> []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    breadcrumbValue() &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; breadcrumb &#125; = <span class="keyword">this</span>;</span><br><span class="line">      <span class="keyword">if</span> (breadcrumb.length) &#123;</span><br><span class="line">        <span class="keyword">return</span> breadcrumb;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.$route.matched</span><br><span class="line">        .filter(<span class="function"><span class="params">data</span> =&gt;</span> data.meta &amp;&amp; data.meta.breadcrumb)</span><br><span class="line">        .map(<span class="function"><span class="params">data</span> =&gt;</span> (&#123;</span><br><span class="line">          name: data.meta.breadcrumb.title,</span><br><span class="line">          to: data.meta.breadcrumb.replace ? &#123; <span class="attr">name</span>: data.name &#125; : <span class="literal">undefined</span></span><br><span class="line">        &#125;));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style lang="less" scoped&gt;</span></span><br><span class="line"><span class="regexp">.el-breadcrumb &#123;</span></span><br><span class="line"><span class="regexp">  margin-left: 4px;</span></span><br><span class="line"><span class="regexp">  margin-bottom: 12px;</span></span><br><span class="line"><span class="regexp">  font-size: 12px;</span></span><br><span class="line"><span class="regexp">  line-height: 16px;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5、plugins"><a href="#5、plugins" class="headerlink" title="5、plugins"></a>5、plugins</h3><p>存放所有与 devDependencies 相关的插件（如 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#T4Cvnh" target="_blank" rel="noopener">svg-sprite-loader</a>）</p>
+<h3 id="5、plugins"><a href="#5、plugins" class="headerlink" title="5、plugins"></a>5、plugins</h3><p>存放所有与 devDependencies 相关的插件</p>
 <h3 id="6、router"><a href="#6、router" class="headerlink" title="6、router"></a>6、router</h3><p>路由分离，路由运行与路由结构分离成 index.js 与 routes.js，路由结构可根据菜单模块进一步分离，分离后的文件名均加上 routes 前缀：</p>
 <p><img src="/2020/08/13/specification/router.png" alt></p>
 <p>index.js：</p>
@@ -491,7 +559,8 @@
 <p>routes：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> routesHome <span class="keyword">from</span> <span class="string">"./routesHome"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TheLayout <span class="keyword">from</span> <span class="string">"@/components/TheLayout.vue"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [</span><br><span class="line">  &#123;</span><br><span class="line">    path: <span class="string">"/admin"</span>,</span><br><span class="line">    component: TheLayout,</span><br><span class="line">    redirect: &#123; <span class="attr">name</span>: <span class="string">"Home"</span> &#125;,</span><br><span class="line">    children: [...routesHome]</span><br><span class="line">  &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
 
-<p>根据菜单导航进一步分离出来的路由结构详见 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#0lB8k5" target="_blank" rel="noopener">Demo</a>。</p>
+
+
 <h3 id="7、store"><a href="#7、store" class="headerlink" title="7、store"></a>7、store</h3><p>存放全局信息、方法（一般为用户基本信息与用户权限）</p>
 <h3 id="8、views"><a href="#8、views" class="headerlink" title="8、views"></a>8、views</h3><p>存放所有页面，注意命名规范，可参考 <a href="https://cn.vuejs.org/v2/style-guide" target="_blank" rel="noopener">vue 风格指南</a></p>
 <p><img src="/2020/08/13/specification/views.png" alt></p>
@@ -501,82 +570,13 @@
 <h3 id="9、utils"><a href="#9、utils" class="headerlink" title="9、utils"></a>9、utils</h3><p>存放一些小工具小功能小方法，如：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> formatTime = <span class="function"><span class="params">timestamp</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timestamp);</span><br><span class="line">  <span class="keyword">const</span> year = date.getFullYear();</span><br><span class="line">  <span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> day = date.getDate();</span><br><span class="line">  <span class="keyword">const</span> hour = date.getHours();</span><br><span class="line">  <span class="keyword">const</span> minute = date.getMinutes();</span><br><span class="line">  <span class="keyword">const</span> second = date.getSeconds();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    [year, month, day].map(formatNumber).join(<span class="string">"/"</span>) +</span><br><span class="line">    <span class="string">" "</span> +</span><br><span class="line">    [hour, minute, second].map(formatNumber).join(<span class="string">":"</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> formatNumber = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  n = n.toString();</span><br><span class="line">  <span class="keyword">return</span> n[<span class="number">1</span>] ? n : <span class="string">"0"</span> + n;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> formateDay = <span class="function"><span class="params">timestamp</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timestamp);</span><br><span class="line">  <span class="keyword">const</span> year = date.getFullYear();</span><br><span class="line">  <span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> day = date.getDate();</span><br><span class="line">  <span class="keyword">return</span> [year, month, day].map(formatNumber).join(<span class="string">"-"</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  formatTime: formatTime,</span><br><span class="line">  formateDay: formateDay</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>五、Demo</p>
-<p><a href="https://github.com/WinstonYa/vue-admin-framework" target="_blank" rel="noopener">github 传送门</a></p>
+<h2 id="五、Demo"><a href="#五、Demo" class="headerlink" title="五、Demo"></a>五、Demo</h2><p><a href="https://github.com/WinstonYa/vue-admin-framework" target="_blank" rel="noopener">github 传送门</a></p>
 ]]></content>
       <categories>
         <category>前端风格规范</category>
       </categories>
       <tags>
         <tag>前端风格规范</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>
-    <url>/2020/05/23/question-1/</url>
-    <content><![CDATA[<ul>
-<li><p>先看一下<strong>map</strong>的语法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// Return element for new_array </span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>callback</strong>生成新数组元素的函数，使用三个参数：</p>
-<ul>
-<li><p><strong>currentValue</strong>：callback数组正在处理的当前元素。</p>
-</li>
-<li><p><strong>index</strong> （可选）：callback数组中正在处理的当前元素的索引。</p>
-</li>
-<li><p><strong>array</strong>（可选）：map方法调用的数组。</p>
-</li>
-<li><p><strong>thisArg</strong>（可选）：执行callback函数时值被用作this。</p>
-</li>
-</ul>
-<p><strong>返回值</strong>：回调函数的结果组成了一个新的数组。</p>
-</li>
-<li><h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>parseInt()函数解析一个字符串参数，并返回一个指定基数的整数(数学系统的基础)。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><code>string</code>要被解析的值。如果参数不是一个字符串，则将其转换为字符串（使用ToString抽象操作）。字符串开头的空白符将会被忽略。</p>
-</li>
-<li><p><code>radix</code>表示要解析的数字的基数。该值介于 2 ~ 36 之间。</p>
-<p>如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。</p>
-<p>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>  在<code>radix</code>为 undefined，或者<code>radix</code>为 0 或者没有指定的情况下，JavaScript 作如下处理：</p>
-<ul>
-<li><p>如果字符串 string 以”0x”或者”0X”开头, 则基数是16 (16进制).</p>
-</li>
-<li><p>如果字符串 string 以”0”开头, 基数是8（八进制）或者10（十进制），那么具体是哪个基数由实现环境决定。ECMAScript 5 规定使用10，但是并不是所有的浏览器都遵循这个规定。因此，永远都要明确给出radix参数的值。</p>
-</li>
-<li><p>如果字符串 string 以其它任何值开头，则基数是10 (十进制)。</p>
-</li>
-</ul>
-<p>  例子：parseInt(“444”,16) 表示将16进制的444转换成10进制的数，结果为1092。</p>
-<h2 id="本题解析："><a href="#本题解析：" class="headerlink" title="本题解析："></a>本题解析：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
-
-<p>实际执行代码为：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">data,index</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(data,index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>返回值为：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>,<span class="number">0</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>) <span class="comment">// NaN, 3&gt;2,因此3不是2进制数</span></span><br></pre></td></tr></table></figure>
-
-<p>所以本题答案：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [1,NaN,NaN]</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>扩展题</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [10,NaN,2,3,4]</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">2</span>) <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">3</span>) <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">4</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>javascript基础</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
       </tags>
   </entry>
 </search>
