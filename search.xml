@@ -110,15 +110,16 @@
       </tags>
   </entry>
   <entry>
-    <title>给出一个区间的集合，请合并所有重叠的区间。</title>
-    <url>/2020/07/02/arithmetic-gather/</url>
-    <content><![CDATA[<p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">        [<span class="number">1</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">2</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">8</span>, <span class="number">10</span>],</span><br><span class="line">        [<span class="number">15</span>, <span class="number">18</span>],</span><br><span class="line">      ];</span><br><span class="line"></span><br><span class="line">        arr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="keyword">const</span> a2 = arr[i][<span class="number">1</span>],</span><br><span class="line">            b1 = arr[i + <span class="number">1</span>][<span class="number">0</span>],</span><br><span class="line">            b2 = arr[i + <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">          <span class="keyword">if</span> (a2 &gt;= b1) &#123;</span><br><span class="line">            arr[i][<span class="number">1</span>] = a2 &gt; b2 ? a2 : b2;</span><br><span class="line">            arr.splice(i + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">            i--;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// let tempMin = [];</span></span><br><span class="line">      <span class="comment">// let tempMax = [];</span></span><br><span class="line">      <span class="comment">// let temp = [];</span></span><br><span class="line">      <span class="comment">// let item = arr.map((data) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   let min = Math.min(...data);</span></span><br><span class="line">      <span class="comment">//   tempMin.push(min);</span></span><br><span class="line">      <span class="comment">//   let max = Math.max(...data);</span></span><br><span class="line">      <span class="comment">//   tempMax.push(max);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// for (let i = 0; i &lt; tempMin.length; i++) &#123;</span></span><br><span class="line">      <span class="comment">//   if (tempMin[i + 1] &lt;= tempMax[i]) &#123;</span></span><br><span class="line">      <span class="comment">//     tempMin.splice(tempMin[i], 1);</span></span><br><span class="line">      <span class="comment">//     tempMax.splice(tempMax[i-1], 1);</span></span><br><span class="line">      <span class="comment">//     i--;</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// tempMin.map((data, index) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   temp.push([data, tempMax[index]]);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// console.log(temp);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//仅匹配没有连续相同项的数组</span></span><br><span class="line">      <span class="comment">// let all = []</span></span><br><span class="line">      <span class="comment">// let show = false</span></span><br><span class="line">      <span class="comment">// for(let i = 0; i &lt; arr.length; i ++)&#123;</span></span><br><span class="line">      <span class="comment">//   if(show) &#123;</span></span><br><span class="line">      <span class="comment">//     show = false</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   if(arr[i+1] &amp;&amp; arr[i][1] &gt;= arr[i+1][0]) &#123;</span></span><br><span class="line">      <span class="comment">//     all.push([arr[i][0], arr[i+1][1]])</span></span><br><span class="line">      <span class="comment">//     show = true</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   all.push(arr[i])</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// console.log(all)</span></span><br></pre></td></tr></table></figure>
-
+    <title>html/css</title>
+    <url>/2020/05/21/htm&amp;css_1/</url>
+    <content><![CDATA[<h2 id="1-flex-0-1-auto-表示什么意思"><a href="#1-flex-0-1-auto-表示什么意思" class="headerlink" title="1. flex: 0 1 auto 表示什么意思"></a>1. flex: 0 1 auto 表示什么意思</h2><p>​        flex: 0 1 auto 其实就是弹性盒子的默认值，表示 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，分别表示放大比例、缩小比例、分配多余空间之前占据的主轴空间.</p>
+<p>​        1.flex-grow属性定义项目的放大比例，默认为零，即如果存在剩余空间，也不放大。</p>
+<p>​        2.flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<p>​        3.flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间，如果设置了width，则跟随width，如果没有设置width，则为内容实际宽度。</p>
 ]]></content>
       <categories>
         <category>前端面试题</category>
-        <category>面试题汇总</category>
+        <category>html/css</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
@@ -144,6 +145,35 @@
       <categories>
         <category>前端面试题</category>
         <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给出一个区间的集合，请合并所有重叠的区间。</title>
+    <url>/2020/07/02/arithmetic-gather/</url>
+    <content><![CDATA[<p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">        [<span class="number">1</span>, <span class="number">3</span>],</span><br><span class="line">        [<span class="number">2</span>, <span class="number">6</span>],</span><br><span class="line">        [<span class="number">8</span>, <span class="number">10</span>],</span><br><span class="line">        [<span class="number">15</span>, <span class="number">18</span>],</span><br><span class="line">      ];</span><br><span class="line"></span><br><span class="line">        arr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="keyword">const</span> a2 = arr[i][<span class="number">1</span>],</span><br><span class="line">            b1 = arr[i + <span class="number">1</span>][<span class="number">0</span>],</span><br><span class="line">            b2 = arr[i + <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">          <span class="keyword">if</span> (a2 &gt;= b1) &#123;</span><br><span class="line">            arr[i][<span class="number">1</span>] = a2 &gt; b2 ? a2 : b2;</span><br><span class="line">            arr.splice(i + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">            i--;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// let tempMin = [];</span></span><br><span class="line">      <span class="comment">// let tempMax = [];</span></span><br><span class="line">      <span class="comment">// let temp = [];</span></span><br><span class="line">      <span class="comment">// let item = arr.map((data) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   let min = Math.min(...data);</span></span><br><span class="line">      <span class="comment">//   tempMin.push(min);</span></span><br><span class="line">      <span class="comment">//   let max = Math.max(...data);</span></span><br><span class="line">      <span class="comment">//   tempMax.push(max);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// for (let i = 0; i &lt; tempMin.length; i++) &#123;</span></span><br><span class="line">      <span class="comment">//   if (tempMin[i + 1] &lt;= tempMax[i]) &#123;</span></span><br><span class="line">      <span class="comment">//     tempMin.splice(tempMin[i], 1);</span></span><br><span class="line">      <span class="comment">//     tempMax.splice(tempMax[i-1], 1);</span></span><br><span class="line">      <span class="comment">//     i--;</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// tempMin.map((data, index) =&gt; &#123;</span></span><br><span class="line">      <span class="comment">//   temp.push([data, tempMax[index]]);</span></span><br><span class="line">      <span class="comment">// &#125;);</span></span><br><span class="line">      <span class="comment">// console.log(temp);</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//仅匹配没有连续相同项的数组</span></span><br><span class="line">      <span class="comment">// let all = []</span></span><br><span class="line">      <span class="comment">// let show = false</span></span><br><span class="line">      <span class="comment">// for(let i = 0; i &lt; arr.length; i ++)&#123;</span></span><br><span class="line">      <span class="comment">//   if(show) &#123;</span></span><br><span class="line">      <span class="comment">//     show = false</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   if(arr[i+1] &amp;&amp; arr[i][1] &gt;= arr[i+1][0]) &#123;</span></span><br><span class="line">      <span class="comment">//     all.push([arr[i][0], arr[i+1][1]])</span></span><br><span class="line">      <span class="comment">//     show = true</span></span><br><span class="line">      <span class="comment">//     continue</span></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">//   all.push(arr[i])</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">      <span class="comment">// console.log(all)</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>面试题汇总</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手写一个localStorage</title>
+    <url>/2020/07/02/localStorage/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStorage</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.prefix = <span class="string">'pro_'</span>;</span><br><span class="line">    <span class="keyword">this</span>.storage = <span class="built_in">window</span>.localStorage;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// exp/秒，默认 60 * 60 * 24 = 1 天</span></span><br><span class="line">  <span class="keyword">set</span>(key, value, exp = 60 * 60 * 24) &#123;</span><br><span class="line">    <span class="keyword">const</span> timestamp = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">const</span> data = <span class="built_in">JSON</span>.stringify(&#123; value, exp, timestamp &#125;);</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.setItem(prefixKey, data);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">this</span>.storage.getItem(prefixKey);</span><br><span class="line">    <span class="keyword">if</span> (!data) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    data = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    <span class="keyword">const</span> exp = data.exp * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">const</span> &#123; timestamp &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> dataNow = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">if</span> (dataNow &gt; timestamp + exp) &#123;</span><br><span class="line">      <span class="keyword">this</span>.delete(key);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.removeItem(prefixKey);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> MyStorage;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>面试题汇总</category>
       </categories>
       <tags>
         <tag>前端面试</tag>
@@ -220,109 +250,6 @@
       </categories>
       <tags>
         <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手写一个localStorage</title>
-    <url>/2020/07/02/localStorage/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStorage</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.prefix = <span class="string">'pro_'</span>;</span><br><span class="line">    <span class="keyword">this</span>.storage = <span class="built_in">window</span>.localStorage;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// exp/秒，默认 60 * 60 * 24 = 1 天</span></span><br><span class="line">  <span class="keyword">set</span>(key, value, exp = 60 * 60 * 24) &#123;</span><br><span class="line">    <span class="keyword">const</span> timestamp = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">const</span> data = <span class="built_in">JSON</span>.stringify(&#123; value, exp, timestamp &#125;);</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.setItem(prefixKey, data);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">this</span>.storage.getItem(prefixKey);</span><br><span class="line">    <span class="keyword">if</span> (!data) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    data = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    <span class="keyword">const</span> exp = data.exp * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">const</span> &#123; timestamp &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> dataNow = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">if</span> (dataNow &gt; timestamp + exp) &#123;</span><br><span class="line">      <span class="keyword">this</span>.delete(key);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">delete</span>(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixKey = <span class="keyword">this</span>.prefix + key;</span><br><span class="line">    <span class="keyword">this</span>.storage.removeItem(prefixKey);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> MyStorage;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>面试题汇总</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html/css</title>
-    <url>/2020/05/21/htm&amp;css_1/</url>
-    <content><![CDATA[<h2 id="1-flex-0-1-auto-表示什么意思"><a href="#1-flex-0-1-auto-表示什么意思" class="headerlink" title="1. flex: 0 1 auto 表示什么意思"></a>1. flex: 0 1 auto 表示什么意思</h2><p>​        flex: 0 1 auto 其实就是弹性盒子的默认值，表示 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，分别表示放大比例、缩小比例、分配多余空间之前占据的主轴空间.</p>
-<p>​        1.flex-grow属性定义项目的放大比例，默认为零，即如果存在剩余空间，也不放大。</p>
-<p>​        2.flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
-<p>​        3.flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间，如果设置了width，则跟随width，如果没有设置width，则为内容实际宽度。</p>
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>html/css</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2020/08/13/test/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>
-    <url>/2020/05/23/question-1/</url>
-    <content><![CDATA[<ul>
-<li><p>先看一下<strong>map</strong>的语法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// Return element for new_array </span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
-
-<p><strong>callback</strong>生成新数组元素的函数，使用三个参数：</p>
-<ul>
-<li><p><strong>currentValue</strong>：callback数组正在处理的当前元素。</p>
-</li>
-<li><p><strong>index</strong> （可选）：callback数组中正在处理的当前元素的索引。</p>
-</li>
-<li><p><strong>array</strong>（可选）：map方法调用的数组。</p>
-</li>
-<li><p><strong>thisArg</strong>（可选）：执行callback函数时值被用作this。</p>
-</li>
-</ul>
-<p><strong>返回值</strong>：回调函数的结果组成了一个新的数组。</p>
-</li>
-<li><h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>parseInt()函数解析一个字符串参数，并返回一个指定基数的整数(数学系统的基础)。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><code>string</code>要被解析的值。如果参数不是一个字符串，则将其转换为字符串（使用ToString抽象操作）。字符串开头的空白符将会被忽略。</p>
-</li>
-<li><p><code>radix</code>表示要解析的数字的基数。该值介于 2 ~ 36 之间。</p>
-<p>如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。</p>
-<p>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>  在<code>radix</code>为 undefined，或者<code>radix</code>为 0 或者没有指定的情况下，JavaScript 作如下处理：</p>
-<ul>
-<li><p>如果字符串 string 以”0x”或者”0X”开头, 则基数是16 (16进制).</p>
-</li>
-<li><p>如果字符串 string 以”0”开头, 基数是8（八进制）或者10（十进制），那么具体是哪个基数由实现环境决定。ECMAScript 5 规定使用10，但是并不是所有的浏览器都遵循这个规定。因此，永远都要明确给出radix参数的值。</p>
-</li>
-<li><p>如果字符串 string 以其它任何值开头，则基数是10 (十进制)。</p>
-</li>
-</ul>
-<p>  例子：parseInt(“444”,16) 表示将16进制的444转换成10进制的数，结果为1092。</p>
-<h2 id="本题解析："><a href="#本题解析：" class="headerlink" title="本题解析："></a>本题解析：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
-
-<p>实际执行代码为：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">data,index</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(data,index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>返回值为：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>,<span class="number">0</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>) <span class="comment">// NaN, 3&gt;2,因此3不是2进制数</span></span><br></pre></td></tr></table></figure>
-
-<p>所以本题答案：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [1,NaN,NaN]</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>扩展题</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [10,NaN,2,3,4]</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">2</span>) <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">3</span>) <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">4</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>javascript基础</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
       </tags>
   </entry>
   <entry>
@@ -582,6 +509,74 @@
       </categories>
       <tags>
         <tag>前端风格规范</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>
+    <url>/2020/05/23/question-1/</url>
+    <content><![CDATA[<ul>
+<li><p>先看一下<strong>map</strong>的语法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> new_array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue[, index[, array]]</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// Return element for new_array </span></span><br><span class="line">&#125;[, thisArg])</span><br></pre></td></tr></table></figure>
+
+<p><strong>callback</strong>生成新数组元素的函数，使用三个参数：</p>
+<ul>
+<li><p><strong>currentValue</strong>：callback数组正在处理的当前元素。</p>
+</li>
+<li><p><strong>index</strong> （可选）：callback数组中正在处理的当前元素的索引。</p>
+</li>
+<li><p><strong>array</strong>（可选）：map方法调用的数组。</p>
+</li>
+<li><p><strong>thisArg</strong>（可选）：执行callback函数时值被用作this。</p>
+</li>
+</ul>
+<p><strong>返回值</strong>：回调函数的结果组成了一个新的数组。</p>
+</li>
+<li><h3 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt"></a>parseInt</h3><p>parseInt()函数解析一个字符串参数，并返回一个指定基数的整数(数学系统的基础)。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>string</code>要被解析的值。如果参数不是一个字符串，则将其转换为字符串（使用ToString抽象操作）。字符串开头的空白符将会被忽略。</p>
+</li>
+<li><p><code>radix</code>表示要解析的数字的基数。该值介于 2 ~ 36 之间。</p>
+<p>如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。</p>
+<p>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>  在<code>radix</code>为 undefined，或者<code>radix</code>为 0 或者没有指定的情况下，JavaScript 作如下处理：</p>
+<ul>
+<li><p>如果字符串 string 以”0x”或者”0X”开头, 则基数是16 (16进制).</p>
+</li>
+<li><p>如果字符串 string 以”0”开头, 基数是8（八进制）或者10（十进制），那么具体是哪个基数由实现环境决定。ECMAScript 5 规定使用10，但是并不是所有的浏览器都遵循这个规定。因此，永远都要明确给出radix参数的值。</p>
+</li>
+<li><p>如果字符串 string 以其它任何值开头，则基数是10 (十进制)。</p>
+</li>
+</ul>
+<p>  例子：parseInt(“444”,16) 表示将16进制的444转换成10进制的数，结果为1092。</p>
+<h2 id="本题解析："><a href="#本题解析：" class="headerlink" title="本题解析："></a>本题解析：</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
+
+<p>实际执行代码为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">data,index</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(data,index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>返回值为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>,<span class="number">0</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>) <span class="comment">// NaN, 3&gt;2,因此3不是2进制数</span></span><br></pre></td></tr></table></figure>
+
+<p>所以本题答案：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [1,NaN,NaN]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>扩展题</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>,<span class="string">'10'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line"><span class="comment">// [10,NaN,2,3,4]</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">2</span>) <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">3</span>) <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>,<span class="number">4</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>javascript基础</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
       </tags>
   </entry>
 </search>
