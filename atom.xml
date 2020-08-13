@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Winston Wong</title>
+  
+  <subtitle>Personal Technology Blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://winstonya.github.io/"/>
+  <updated>2020-08-13T09:51:44.624Z</updated>
+  <id>https://winstonya.github.io/</id>
+  
+  <author>
+    <name>Winston Wong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>specification</title>
+    <link href="https://winstonya.github.io/2020/08/13/specification/"/>
+    <id>https://winstonya.github.io/2020/08/13/specification/</id>
+    <published>2020-08-13T08:31:34.000Z</published>
+    <updated>2020-08-13T09:51:44.624Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前端风格规范&quot;&gt;&lt;a href=&quot;#前端风格规范&quot; class=&quot;headerlink&quot; title=&quot;前端风格规范&quot;&gt;&lt;/a&gt;前端风格规范&lt;/h1&gt;&lt;p&gt;Author：@Winston
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端风格规范" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/"/>
+    
+    
+      <category term="前端风格规范" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git升级方法</title>
+    <link href="https://winstonya.github.io/2020/07/12/git-update/"/>
+    <id>https://winstonya.github.io/2020/07/12/git-update/</id>
+    <published>2020-07-12T14:52:32.000Z</published>
+    <updated>2020-07-12T14:54:59.059Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;本地打开Git，输入git-update-git-for-windows&quot;&gt;&lt;a href=&quot;#本地打开Git，输入git-update-git-for-windows&quot; class=&quot;headerlink&quot; title=&quot;本地打开Git，输入git
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://winstonya.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://winstonya.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-lifecycle</title>
+    <link href="https://winstonya.github.io/2020/07/09/Vue-lifecycle/"/>
+    <id>https://winstonya.github.io/2020/07/09/Vue-lifecycle/</id>
+    <published>2020-07-09T11:59:45.000Z</published>
+    <updated>2020-07-09T14:30:29.817Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Vue生命周期&quot;&gt;&lt;a href=&quot;#Vue生命周期&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="Vue" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/Vue/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单实现Node的Events模块</title>
+    <link href="https://winstonya.github.io/2020/07/02/Node-Events/"/>
+    <id>https://winstonya.github.io/2020/07/02/Node-Events/</id>
+    <published>2020-07-01T16:00:00.000Z</published>
+    <updated>2020-07-02T10:08:19.357Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试题汇总" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>给出一个区间的集合，请合并所有重叠的区间。</title>
+    <link href="https://winstonya.github.io/2020/07/02/arithmetic-gather/"/>
+    <id>https://winstonya.github.io/2020/07/02/arithmetic-gather/</id>
+    <published>2020-07-01T16:00:00.000Z</published>
+    <updated>2020-07-02T10:58:14.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;输入: [[1,3],[2,6],[8,10],[15,18]]&lt;br&gt;输出: [[1,6],[8,10],[15,18]]&lt;br&gt;解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试题汇总" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手写一个localStorage</title>
+    <link href="https://winstonya.github.io/2020/07/02/localStorage/"/>
+    <id>https://winstonya.github.io/2020/07/02/localStorage/</id>
+    <published>2020-07-01T16:00:00.000Z</published>
+    <updated>2020-07-02T10:14:55.784Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="面试题汇总" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序弹出输入框的实现</title>
+    <link href="https://winstonya.github.io/2020/06/23/pop-up/"/>
+    <id>https://winstonya.github.io/2020/06/23/pop-up/</id>
+    <published>2020-06-23T07:08:23.000Z</published>
+    <updated>2020-06-23T07:46:31.189Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;指定-modal-弹出框&quot;&gt;&lt;a href=&quot;#指定-modal-弹出框&quot; class=&quot;headerlink&quot; title=&quot;指定 modal 弹出框&quot;&gt;&lt;/a&gt;指定 modal 弹出框&lt;/h2&gt;&lt;p&gt;​       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="https://winstonya.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信小程序" scheme="https://winstonya.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>判断js类型的方式</title>
+    <link href="https://winstonya.github.io/2020/05/26/Javascript_type/"/>
+    <id>https://winstonya.github.io/2020/05/26/Javascript_type/</id>
+    <published>2020-05-26T11:30:44.000Z</published>
+    <updated>2020-05-27T02:53:24.747Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;第一种方式：typeof&quot;&gt;&lt;a href=&quot;#第一种方式：typeof&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="Javascript原理" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/Javascript%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第1题：[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;].map(parseInt) what &amp; why ?</title>
+    <link href="https://winstonya.github.io/2020/05/23/question-1/"/>
+    <id>https://winstonya.github.io/2020/05/23/question-1/</id>
+    <published>2020-05-23T03:59:28.000Z</published>
+    <updated>2020-05-26T10:11:44.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;先看一下&lt;strong&gt;map&lt;/strong&gt;的语法：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="javascript基础" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/javascript%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html/css</title>
+    <link href="https://winstonya.github.io/2020/05/21/htm&amp;css_1/"/>
+    <id>https://winstonya.github.io/2020/05/21/htm&amp;css_1/</id>
+    <published>2020-05-21T10:50:45.000Z</published>
+    <updated>2020-05-26T10:11:39.836Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-flex-0-1-auto-表示什么意思&quot;&gt;&lt;a href=&quot;#1-flex-0-1-auto-表示什么意思&quot; class=&quot;headerlink&quot; title=&quot;1. flex: 0 1 auto 表示什么意思&quot;&gt;&lt;/a&gt;1. flex: 0 1 auto
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端面试题" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="html/css" scheme="https://winstonya.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/html-css/"/>
+    
+    
+      <category term="前端面试" scheme="https://winstonya.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>

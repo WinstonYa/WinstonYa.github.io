@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端风格规范," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Winston Wong" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="前端风格规范Author：@Winston Wong Date：2020.06.12 Keywords：less、babel、router、vuex、eslint、unit-jest 一、框架的选择Vue.js 官方文档     Vue CLI 官方文档 在官网的指引下，下载 @vue&#x2F;cli 后，运行 vue create 项目名 来创建一个新项目，你会被提示选取一个 preset，若已有符合风">
+<meta property="og:type" content="article">
+<meta property="og:title" content="specification">
+<meta property="og:url" content="https://winstonya.github.io/2020/08/13/specification/index.html">
+<meta property="og:site_name" content="Winston Wong">
+<meta property="og:description" content="前端风格规范Author：@Winston Wong Date：2020.06.12 Keywords：less、babel、router、vuex、eslint、unit-jest 一、框架的选择Vue.js 官方文档     Vue CLI 官方文档 在官网的指引下，下载 @vue&#x2F;cli 后，运行 vue create 项目名 来创建一个新项目，你会被提示选取一个 preset，若已有符合风">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-1.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-2.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-3.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-4.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-5.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/preset-6.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/svg.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/global.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/assets.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/router.png">
+<meta property="og:image" content="https://winstonya.github.io/2020/08/13/specification/views.png">
+<meta property="article:published_time" content="2020-08-13T08:31:34.000Z">
+<meta property="article:modified_time" content="2020-08-13T09:51:44.624Z">
+<meta property="article:author" content="Winston Wong">
+<meta property="article:tag" content="前端风格规范">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://winstonya.github.io/2020/08/13/specification/preset.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://winstonya.github.io/2020/08/13/specification/"/>
+
+
+
+
+
+  <title>specification | Winston Wong</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Winston Wong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Personal Technology Blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://winstonya.github.io/2020/08/13/specification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winston Wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winston Wong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">specification</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-13T16:31:34+08:00">
+                2020-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/" itemprop="url" rel="index">
+                    <span itemprop="name">前端风格规范</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/08/13/specification/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/08/13/specification/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/08/13/specification/" class="leancloud_visitors" data-flag-title="specification">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  5.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  29
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前端风格规范"><a href="#前端风格规范" class="headerlink" title="前端风格规范"></a>前端风格规范</h1><p>Author：@Winston Wong</p>
+<p>Date：2020.06.12</p>
+<p>Keywords：less、babel、router、vuex、eslint、unit-jest</p>
+<h2 id="一、框架的选择"><a href="#一、框架的选择" class="headerlink" title="一、框架的选择"></a>一、框架的选择</h2><p><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js 官方文档</a>     <a href="https://cli.vuejs.org/zh" target="_blank" rel="noopener">Vue CLI 官方文档</a></p>
+<p>在官网的指引下，下载 @vue/cli 后，运行 vue create 项目名 来创建一个新项目，你会被提示选取一个 preset，若已有符合风格规范的设置，可直接选择，如：</p>
+<p><img src="/2020/08/13/specification/preset.png" alt></p>
+<p>否则选“手动选择特性”（Manually select features）来选取需要的特性，步骤如下：</p>
+<ol>
+<li><p>Check the features needed for your project：</p>
+</li>
+<li><ol>
+<li>Babel</li>
+</ol>
+</li>
+<li><ol>
+<li>Router</li>
+</ol>
+</li>
+<li><ol>
+<li>Vuex</li>
+</ol>
+</li>
+<li><ol>
+<li>CSS Pre-processors</li>
+</ol>
+</li>
+<li><ol>
+<li>Linter / Formatter</li>
+</ol>
+</li>
+<li><ol>
+<li>Unit Testing</li>
+</ol>
+</li>
+<li><p>Use history mode for router?         Y</p>
+</li>
+<li><p>Pick a CSS pre-processor：          Less</p>
+</li>
+<li><p>Pick a linter / formatter config：      ESLint + Prettier</p>
+</li>
+<li><p>Pick additional lint features：         Lint on save，Lint and fix on commit</p>
+</li>
+<li><p>Pick a unit testing solution：         Jest</p>
+</li>
+</ol>
+<p>过程图如下：</p>
+<p><img src="/2020/08/13/specification/preset-1.png" alt></p>
+<p><img src="/2020/08/13/specification/preset-2.png" alt></p>
+<p><img src="/2020/08/13/specification/preset-3.png" alt></p>
+<p><img src="/2020/08/13/specification/preset-4.png" alt></p>
+<p><img src="/2020/08/13/specification/preset-5.png" alt></p>
+<p><img src="/2020/08/13/specification/preset-6.png" alt></p>
+<p>配置中的 ESLint 主要负责代码规则校验，Prettier 主要负责代码风格优化，它们主要依赖的插件如下：</p>
+<ul>
+<li><p><a href="https://prettier.io/" target="_blank" rel="noopener">Perttier</a>：代码格式化工具</p>
+</li>
+<li><p><a href="https://eslint.org/docs/user-guide/getting-started" target="_blank" rel="noopener">eslint(recommended)</a>：eslint 中包含的推荐规则</p>
+</li>
+<li><p><a href="https://github.com/prettier/eslint-plugin-prettier" target="_blank" rel="noopener">eslint-plugin-prettier</a>：eslint 中使用 prettier 进行检查</p>
+</li>
+<li><p><a href="https://github.com/prettier/eslint-config-prettier" target="_blank" rel="noopener">eslint-config-prettier</a>：用于解决 eslint 与 prettier 的规则冲突</p>
+</li>
+</ul>
+<h2 id="二、配置-commitlint"><a href="#二、配置-commitlint" class="headerlink" title="二、配置 commitlint"></a>二、配置 commitlint</h2><p>1、Vue CLI 手脚架生成后，配置 commitlint，下载依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add -D @commitlint&#x2F;&#123;cli,config-conventional&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><a href="https://commitlint.js.org/" target="_blank" rel="noopener">@commitlint/cli</a>：脚手架基础设施</p>
+</li>
+<li><p><a href="https://github.com/conventional-changelog/commitlint" target="_blank" rel="noopener">@commitlint/config-conventional</a>：官方推荐规则</p>
+</li>
+</ul>
+<p>2、根目录下新建 commitlint.config.js 文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// commitlint.config.js</span></span><br><span class="line">*<span class="built_in">module</span>*.*exports* = &#123;</span><br><span class="line"> extends: [<span class="string">"@commitlint/config-conventional"</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>3、修改 package.json，添加 git commit 钩子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">&#123;</span><br><span class="line">...</span><br><span class="line"> *<span class="string">"gitHooks"</span>*: &#123;</span><br><span class="line">  *<span class="string">"pre-commit"</span>*: <span class="string">"lint-staged"</span>,</span><br><span class="line">  *<span class="string">"commit-msg"</span>*: <span class="string">"commitlint -E GIT_PARAMS"</span>     <span class="comment">// 添加 git commit 钩子</span></span><br><span class="line"> &#125;,</span><br><span class="line"> *<span class="string">"lint-staged"</span>*: &#123;</span><br><span class="line">  *<span class="string">"\*.&#123;js,jsx,vue&#125;"</span>*: [</span><br><span class="line">   <span class="string">"vue-cli-service lint"</span>,</span><br><span class="line">   <span class="string">"git add"</span></span><br><span class="line">  ]</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、Commit message 的格式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;   // Header 是必需的</span><br><span class="line">&lt;body&gt;             // Body 可以省略</span><br><span class="line">&lt;footer&gt;            // Footer 可以省略</span><br></pre></td></tr></table></figure>
+
+<p>Header部分只有一行，包括三个字段：</p>
+<ul>
+<li><p>type（必需）：用于说明 commit 的类别，标识为：</p>
+</li>
+<li><ul>
+<li>feat：新功能（feature）</li>
+</ul>
+</li>
+<li><ul>
+<li>fix：修补 bug</li>
+</ul>
+</li>
+<li><ul>
+<li>docs：文档（documentation）</li>
+</ul>
+</li>
+<li><ul>
+<li>style： 格式（不影响代码运行的变动）</li>
+</ul>
+</li>
+<li><ul>
+<li>refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）</li>
+</ul>
+</li>
+<li><ul>
+<li>test：增加测试</li>
+</ul>
+</li>
+<li><ul>
+<li>chore：构建过程或辅助工具的变动</li>
+</ul>
+</li>
+<li><p>scope（可选）：用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。</p>
+</li>
+<li><p>subject（必需）：是 commit 目的的简短描述，不超过 50 个字符：</p>
+</li>
+<li><ul>
+<li>以动词开头，使用第一人称现在时，比如 change，而不是 changed 或 changes</li>
+</ul>
+</li>
+<li><ul>
+<li>第一个字母小写</li>
+</ul>
+</li>
+<li><ul>
+<li>结尾不加句号（.）</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、选配依赖包"><a href="#三、选配依赖包" class="headerlink" title="三、选配依赖包"></a>三、选配依赖包</h2><h3 id="1、element-ui"><a href="#1、element-ui" class="headerlink" title="1、element-ui"></a>1、element-ui</h3><p>下载依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add element-ui</span><br></pre></td></tr></table></figure>
+
+<p>修改 src 目录下的 main.js 文件，全局引用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App.vue"</span>;</span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">"./router"</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">"./store"</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">"element-ui"</span>;          <span class="comment">// 引入 element-ui</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"element-ui/lib/theme-chalk/index.css"</span>;     <span class="comment">// 全局引用样式</span></span><br><span class="line">Vue.use(ElementUI);                  <span class="comment">// 全局使用 element-ui</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line"> router,</span><br><span class="line"> store,</span><br><span class="line"> render: *h* *=&gt;* h(App)</span><br><span class="line">&#125;).$mount(<span class="string">"#app"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>使用方法详见文档：<a href="https://element.eleme.cn/" target="_blank" rel="noopener">element-ui 官方文档</a></p>
+<h3 id="2、nprogress"><a href="#2、nprogress" class="headerlink" title="2、nprogress"></a>2、nprogress</h3><p>下载依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add nprogress</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/rstacruz/nprogress" target="_blank" rel="noopener">github 传送门</a>，使用方法详见 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#7GI050" target="_blank" rel="noopener">router</a>。</p>
+<h3 id="3、svg-sprite-loader"><a href="#3、svg-sprite-loader" class="headerlink" title="3、svg-sprite-loader"></a>3、svg-sprite-loader</h3><p>下载依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add -D svg-sprite-loader</span><br></pre></td></tr></table></figure>
+
+<p>新建 / 修改 vue.config.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">*<span class="keyword">const</span>* path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line">*<span class="function"><span class="keyword">function</span>* <span class="title">resolve</span>(<span class="params">*dir*</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> path.join(__dirname, *dir*);</span><br><span class="line">&#125;</span><br><span class="line">*<span class="built_in">module</span>*.*exports* = &#123;</span><br><span class="line"> chainWebpack: *config* *=&gt;* &#123;</span><br><span class="line">  <span class="comment">// set svg-sprite-loader</span></span><br><span class="line">  *config*.module</span><br><span class="line">   .rule(<span class="string">"svg"</span>)</span><br><span class="line">   .exclude.add(resolve(<span class="string">"src/plugins/icons/svg"</span>))</span><br><span class="line">   .end();</span><br><span class="line">  *config*.module</span><br><span class="line">   .rule(<span class="string">"icons"</span>)</span><br><span class="line">   .test(<span class="regexp">/\.svg$/</span>)</span><br><span class="line">   .include.add(resolve(<span class="string">"src/plugins/icons/svg"</span>))</span><br><span class="line">   .end()</span><br><span class="line">   .use(<span class="string">"svg-sprite-loader"</span>)</span><br><span class="line">   .loader(<span class="string">"svg-sprite-loader"</span>)</span><br><span class="line">   .options(&#123;</span><br><span class="line">    symbolId: <span class="string">"icon-[name]"</span></span><br><span class="line">   &#125;)</span><br><span class="line">   .end();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>src 目录下新增 plugins 目录，plugins 目录下新增 icons 目录：</p>
+<p>@/plugins/icons/index.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> svg <span class="keyword">from</span> <span class="string">"./index.vue"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"> install: *<span class="function"><span class="keyword">function</span>*(<span class="params">*Vue*</span>) </span>&#123;</span><br><span class="line">  *<span class="keyword">const</span>* requireAll = *requireContext* *=&gt;*</span><br><span class="line">   *requireContext*.keys().map(*requireContext*);</span><br><span class="line">  *<span class="keyword">const</span>* req = <span class="built_in">require</span>.context(<span class="string">"./svg"</span>, <span class="literal">false</span>, /\.svg$/);</span><br><span class="line">  requireAll(req);</span><br><span class="line">  *Vue*.component(svg.name, svg);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>@/plugins/icons/index.vue：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;svg <span class="class"><span class="keyword">class</span></span>=<span class="string">"svg-icon"</span> :<span class="class"><span class="keyword">class</span></span>=<span class="string">"svgClass"</span>&gt;</span><br><span class="line">    &lt;use :xlink:href=<span class="string">"iconName"</span>&gt;&lt;<span class="regexp">/use&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>svg&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">export default &#123;</span></span><br><span class="line"><span class="regexp">  name: "IconSvg",</span></span><br><span class="line"><span class="regexp">  props: &#123;</span></span><br><span class="line"><span class="regexp">    svgClass: &#123;</span></span><br><span class="line"><span class="regexp">      type: String</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    svgName: &#123;</span></span><br><span class="line"><span class="regexp">      type: String,</span></span><br><span class="line"><span class="regexp">      required: true</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  computed: &#123;</span></span><br><span class="line"><span class="regexp">    iconName() &#123;</span></span><br><span class="line"><span class="regexp">      return `#icon-$&#123;this.svgName&#125;`;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">.svg-icon &#123;</span><br><span class="line">  width: <span class="number">1</span>em;</span><br><span class="line">  height: <span class="number">1</span>em;</span><br><span class="line">  vertical-align: <span class="number">-0.15</span>em;</span><br><span class="line">  fill: currentColor;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>@/plugins/icons/svg目录：（存放 svg 文件）</p>
+<p><img src="/2020/08/13/specification/svg.png" alt></p>
+<p>svg 文件参考：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> standalone=<span class="string">"no"</span>?&gt;&lt;!DOCTYPE svg PUBLIC <span class="string">"-//W3C//DTD SVG 1.1//EN"</span> <span class="string">"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">t</span>=<span class="string">"1583823818343"</span> <span class="attr">class</span>=<span class="string">"icon"</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">version</span>=<span class="string">"1.1"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">p-id</span>=<span class="string">"14478"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"200"</span>&gt;</span><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M908.864 206.656c-11.52-12.096-24.768-18.432-39.872-19.072h-10.88c-38.08 6.08-71.36 11.968-99.776 17.664-28.416 5.76-51.392 11.648-68.928 17.664-14.528 2.432-34.624 9.536-60.288 21.312-25.728 11.776-55.744 27.648-90.24 47.616-17.536 6.08-35.072 6.08-52.608 0-35.072-16.896-65.024-31.424-89.792-43.52l-55.296-25.408c-19.968-6.016-43.84-11.904-71.616-17.664-27.84-5.76-61.952-11.648-102.464-17.664h-11.776c-17.536 0.64-31.424 6.976-41.728 19.072-10.304 12.096-15.744 27.2-16.32 45.312v440.704c0.576 15.104 5.76 28.736 15.424 40.832 9.664 12.096 22.08 19.648 37.184 22.656 40.512 6.016 76.48 12.864 107.904 20.416 31.424 7.552 57.408 14.336 78.016 20.416l59.84 23.552c25.408 9.664 55.616 23.296 90.688 40.832 17.536 5.44 35.072 5.44 52.608 0 34.432-17.536 64.512-31.872 90.24-43.072 25.664-11.2 45.824-18.304 60.288-21.312 20.544-5.44 46.528-11.52 78.016-18.112l107.904-22.656c14.528-3.008 26.752-9.984 36.736-20.864 9.984-10.88 14.976-25.088 14.976-42.624V251.968c-0.704-18.112-6.72-33.216-18.24-45.312z m-364.48 472.768c0 15.872-14.464 28.928-32.128 28.928s-32.128-12.992-32.128-28.928V433.856c0-15.872 14.464-28.928 32.128-28.928s32.128 12.992 32.128 28.928v245.568z"</span> <span class="attr">p-id</span>=<span class="string">"14479"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>修改 src 目录下的 main.js 文件，全局引用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">import</span> IconSvg <span class="keyword">from</span> <span class="string">"./plugins/icons"</span>;</span><br><span class="line"><span class="number">2</span> Vue.use(IconSvg);</span><br></pre></td></tr></table></figure>
+
+<p>使用方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;icon-svg</span><br><span class="line"><span class="number">2</span>  svg-<span class="class"><span class="keyword">class</span></span>=<span class="string">"homework-svg-class"</span>    <span class="comment">// 可选，给对应的 svg 设 class 类名</span></span><br><span class="line"><span class="number">3</span>  svg-name=<span class="string">"homework"</span>    <span class="comment">// 必选，svg 对应的文件名称（@/plugins/icons/svg目录下）</span></span><br><span class="line"><span class="number">4</span> &gt;</span><br><span class="line"><span class="number">5</span> &lt;<span class="regexp">/icon-svg&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、vue-i18n"><a href="#4、vue-i18n" class="headerlink" title="4、vue-i18n"></a>4、vue-i18n</h3><p>下载依赖包：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-i18n</span><br></pre></td></tr></table></figure>
+
+<p>在 src 目录下新建 locales 文件夹，对 i18n 进行统一封装：</p>
+<p>@/locales/i18n.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> VueI18n <span class="keyword">from</span> <span class="string">"vue-i18n"</span>;</span><br><span class="line"><span class="keyword">import</span> enUS <span class="keyword">from</span> <span class="string">"./element/en-US"</span>;  <span class="comment">//也可直接引用 element-ui 插件中的多语言文件</span></span><br><span class="line"><span class="keyword">import</span> zhCN <span class="keyword">from</span> <span class="string">"./element/zh-CN"</span>;</span><br><span class="line"><span class="keyword">import</span> frFR <span class="keyword">from</span> <span class="string">"./element/fr-FR"</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(VueI18n);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> LOCALE = <span class="string">"locale"</span>;                                     <span class="comment">//本地存储语言的key</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SUPPORTED_LANGS = [<span class="string">"en-US"</span>, <span class="string">"zh-CN"</span>, <span class="string">"fr-FR"</span>];  <span class="comment">//支持的语言</span></span><br><span class="line"><span class="keyword">const</span> DEFAULT_LANG = SUPPORTED_LANGS[<span class="number">0</span>];                     <span class="comment">//默认语言</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> setLocale = <span class="function"><span class="params">lang</span> =&gt;</span> localStorage.setItem(LOCALE, lang);</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> getLocale = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> lang = localStorage.getItem(LOCALE);</span><br><span class="line">  <span class="keyword">return</span> lang &amp;&amp; SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ELEMENT_LANG = &#123;               <span class="comment">//项目支持的语言与引入的ui多语言文件建立关联</span></span><br><span class="line">  <span class="string">"en-US"</span>: enUS,</span><br><span class="line">  <span class="string">"zh-CN"</span>: zhCN,</span><br><span class="line">  <span class="string">"fr-FR"</span>: frFR</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadLocaleMessages</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> locales = <span class="built_in">require</span>.context(<span class="string">"./项目名"</span>, <span class="literal">true</span>, /[A-Za-z0<span class="number">-9</span>-_,\s]+\.json$/i);</span><br><span class="line">  <span class="keyword">const</span> messages = &#123;&#125;;</span><br><span class="line">  locales.keys().forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> matched = key.match(<span class="regexp">/([A-Za-z0-9-_]+)\./i</span>);</span><br><span class="line">    <span class="keyword">if</span> (matched &amp;&amp; matched.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> locale = matched[<span class="number">1</span>];</span><br><span class="line">      messages[locale] = &#123;</span><br><span class="line">        ...locales(key),</span><br><span class="line">        ...ELEMENT_LANG[locale]      <span class="comment">//多语言信息中加入ui多语言</span></span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> messages;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> VueI18n(&#123;</span><br><span class="line">  locale: getLocale(),</span><br><span class="line">  fallbackLocale: DEFAULT_LANG,</span><br><span class="line">  messages: loadLocaleMessages()</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>@/locales/项目名/支持语言的 json 格式文件（en-US.json、zh-CN.json、fr-FR.json）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &#123;</span><br><span class="line"><span class="number">2</span>  <span class="string">"key"</span>: <span class="string">"value"</span></span><br><span class="line"><span class="number">3</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 main.js 中引入 i18n：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App.vue"</span>;</span><br><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"./locales/i18n"</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">"element-ui"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"element-ui/lib/theme-chalk/index.css"</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI, &#123; <span class="attr">i18n</span>: <span class="function">(<span class="params">key, value</span>) =&gt;</span> i18n.t(key, value) &#125;); <span class="comment">//引入i18n</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  i18n,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(<span class="string">"#app"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在 vue 实例中使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123; info &#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;&#123;&#123; $t("key.value") &#125;&#125;&lt;/</span>div&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      info: <span class="keyword">this</span>.$i18n.t(<span class="string">"key.value"</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在 vue 实例外使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"@/locales/i18n"</span>;</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span> i18n.t(<span class="string">"key.value"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、axios"><a href="#5、axios" class="headerlink" title="5、axios"></a>5、axios</h3><p><a href="https://github.com/axios/axios" target="_blank" rel="noopener">github 传送门</a></p>
+<p>下载依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add axios</span><br></pre></td></tr></table></figure>
+
+
+
+<p>新建 global 文件夹，目录结构如图：</p>
+<p><img src="/2020/08/13/specification/global.png" alt></p>
+<p>@/global/request/api.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  userInfo: <span class="string">"/api/xxxx"</span>,</span><br><span class="line"></span><br><span class="line">  coursesAll: <span class="string">"/api/courses/all"</span>,</span><br><span class="line">  courses: <span class="string">"/api/courses"</span>,</span><br><span class="line">  coursesItem: <span class="function"><span class="params">id</span> =&gt;</span> <span class="string">`/api/courses/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>@/global/request/axios.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Message &#125; <span class="keyword">from</span> <span class="string">"element-ui"</span>;</span><br><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">"@/locales/i18n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> axiosInstance = axios.create();</span><br><span class="line"></span><br><span class="line">axiosInstance.defaults.timeout = <span class="number">20000</span>;</span><br><span class="line"></span><br><span class="line">axiosInstance.interceptors.request.use(</span><br><span class="line">  config =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> newConfig = &#123; ...config &#125;;</span><br><span class="line">    <span class="keyword">const</span> TOKEN = localStorage.getItem(<span class="string">"admin_token"</span>);</span><br><span class="line">    <span class="keyword">const</span> lang = localStorage.getItem(<span class="string">"locale"</span>);</span><br><span class="line">    <span class="comment">// const offset = -new Date().getTimezoneOffset() / 60;</span></span><br><span class="line">    <span class="comment">// const timezone = offset &lt; 0 ? "UTC" + offset : "UTC+" + offset;</span></span><br><span class="line">    <span class="keyword">if</span> (TOKEN) &#123;</span><br><span class="line">      newConfig.headers.Authorization = <span class="string">`Bearer <span class="subst">$&#123;TOKEN&#125;</span>`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    newConfig.headers[<span class="string">"Accept-Language"</span>] = lang ? lang : <span class="string">"en-US"</span>;</span><br><span class="line">    <span class="comment">// newConfig.headers["Client-Timezone"] = timezone;</span></span><br><span class="line">    <span class="keyword">return</span> newConfig;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; <span class="built_in">Promise</span>.reject(error)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> handleErrorRequest = <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; response &#125; = error;</span><br><span class="line">  <span class="keyword">const</span> status = response ? response.status : <span class="number">408</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (response) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; data &#125; = response;</span><br><span class="line">    <span class="keyword">const</span> &#123; errors &#125; = data;</span><br><span class="line">    <span class="keyword">const</span> message = data.message || i18n.t(<span class="string">"api.serverError"</span>);</span><br><span class="line">    <span class="keyword">if</span> (status === <span class="number">401</span>) &#123;</span><br><span class="line">      localStorage.removeItem(<span class="string">"admin_token"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (status === <span class="number">403</span>) &#123;</span><br><span class="line">      Message.error(i18n.t(<span class="string">"api.forbidden"</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (status === <span class="number">419</span>) &#123;</span><br><span class="line">      <span class="comment">// 页面过期;</span></span><br><span class="line">      localStorage.clear();</span><br><span class="line">      sessionStorage.clear();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (status === <span class="number">422</span> || status === <span class="number">423</span> || status === <span class="number">429</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> errorObj = errors ? errors : data;</span><br><span class="line">      <span class="built_in">Object</span>.keys(errorObj).forEach(<span class="function"><span class="params">errorKey</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> errorValue = errorObj[errorKey].join(<span class="string">"\n"</span>);</span><br><span class="line">        Message.error(errorValue);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      Message.error(message);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    Message.error(i18n.t(<span class="string">"api.timeout"</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">axiosInstance.interceptors.response.use(</span><br><span class="line">  res =&gt; &#123;</span><br><span class="line">    <span class="keyword">switch</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">      <span class="keyword">case</span> res.status === <span class="number">200</span>:</span><br><span class="line">        <span class="keyword">return</span> res.data;</span><br><span class="line">      <span class="keyword">case</span> res.data.code === <span class="number">200</span>:</span><br><span class="line">        <span class="keyword">return</span> res.data.data;</span><br><span class="line">      <span class="keyword">case</span> res.data.error_code === <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> res.data.data;</span><br><span class="line">      <span class="comment">// case !!res.status:</span></span><br><span class="line">      <span class="comment">//   Message.error(&#123;</span></span><br><span class="line">      <span class="comment">//     dangerouslyUseHTMLString: true,</span></span><br><span class="line">      <span class="comment">//     message: `&lt;pre&gt;$&#123;res.data.message&#125;&lt;/pre&gt;`</span></span><br><span class="line">      <span class="comment">//   &#125;);</span></span><br><span class="line">      <span class="comment">//   return Promise.reject(res.data);</span></span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> res.data;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    handleErrorRequest(error);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  post(url = <span class="string">""</span>, data = &#123;&#125;, config = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> axiosInstance.post(url, data, config);</span><br><span class="line">  &#125;,</span><br><span class="line">  put(url = <span class="string">""</span>, data = &#123;&#125;, config = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> axiosInstance.put(url, data, config);</span><br><span class="line">  &#125;,</span><br><span class="line">  patch(url = <span class="string">""</span>, data = &#123;&#125;, config = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> axiosInstance.patch(url, data, config);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">get</span>(url = "", params = &#123;&#125;, config = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> OPTIONS = <span class="built_in">Object</span>.assign(&#123; params &#125;, config);</span><br><span class="line">    <span class="keyword">return</span> axiosInstance.get(url, OPTIONS);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">delete</span>(url = <span class="string">""</span>, params = &#123;&#125;, config = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> OPTIONS = <span class="built_in">Object</span>.assign(&#123; params &#125;, config);</span><br><span class="line">    <span class="keyword">return</span> axiosInstance.delete(url, OPTIONS);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>@/global/service/user.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"@/global/request/axios"</span>;</span><br><span class="line"><span class="keyword">import</span> API <span class="keyword">from</span> <span class="string">"@/global/request/api"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> userService = &#123;</span><br><span class="line">  info() &#123;</span><br><span class="line">    <span class="keyword">return</span> axios.get(API.userInfo);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> userService;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="四、src-目录架构"><a href="#四、src-目录架构" class="headerlink" title="四、src 目录架构"></a>四、src 目录架构</h3><h3 id="1、main-js"><a href="#1、main-js" class="headerlink" title="1、main.js"></a>1、main.js</h3><p>只存放全局使用的组件，整体尽量简洁。</p>
+<h3 id="2、App-vue"><a href="#2、App-vue" class="headerlink" title="2、App.vue"></a>2、App.vue</h3><p>渲染父路由，存放全局样式，样式分类抽离进 assets 目录下的 styles 目录中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;<span class="regexp">/router-view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"./assets/styles/base.less"</span>;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">"./assets/styles/el.less"</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、assets"><a href="#3、assets" class="headerlink" title="3、assets"></a>3、assets</h3><p>存放静态文件，一般为样式和图片，所以分别新建两个目录：images 和 styles：</p>
+<p><img src="/2020/08/13/specification/assets.png" alt></p>
+<p>base.less 与 el.less 具体参考如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// base.less</span></span><br><span class="line">* &#123;</span><br><span class="line">  padding: <span class="number">0</span>;</span><br><span class="line">  margin: <span class="number">0</span>;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  font-family: <span class="string">"Helvetica Neue"</span>, Helvetica, <span class="string">"PingFang SC"</span>, <span class="string">"Hiragino Sans GB"</span>,</span><br><span class="line">    <span class="string">"Microsoft YaHei"</span>, <span class="string">"微软雅黑"</span>, Arial, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">  height: <span class="number">100</span>%;</span><br><span class="line">  background-color: #fafafa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.page-content-container &#123;</span><br><span class="line">  padding: <span class="number">12</span>px <span class="number">20</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.mb<span class="number">-24</span> &#123;</span><br><span class="line">  margin-bottom: <span class="number">24</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.mb<span class="number">-20</span> &#123;</span><br><span class="line">  margin-bottom: <span class="number">20</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.mb<span class="number">-12</span> &#123;</span><br><span class="line">  margin-bottom: <span class="number">12</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.mb<span class="number">-8</span> &#123;</span><br><span class="line">  margin-bottom: <span class="number">8</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.mr<span class="number">-12</span> &#123;</span><br><span class="line">  margin-right: <span class="number">12</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.w<span class="number">-90</span>pc &#123;</span><br><span class="line">  width: <span class="number">90</span>% !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-95</span>pc &#123;</span><br><span class="line">  width: <span class="number">95</span>% !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-600</span> &#123;</span><br><span class="line">  width: <span class="number">600</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-260</span> &#123;</span><br><span class="line">  width: <span class="number">260</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-200</span> &#123;</span><br><span class="line">  width: <span class="number">200</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-180</span> &#123;</span><br><span class="line">  width: <span class="number">180</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-170</span> &#123;</span><br><span class="line">  width: <span class="number">170</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-135</span> &#123;</span><br><span class="line">  width: <span class="number">135</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-120</span> &#123;</span><br><span class="line">  width: <span class="number">120</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-100</span> &#123;</span><br><span class="line">  width: <span class="number">100</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line">.w<span class="number">-90</span> &#123;</span><br><span class="line">  width: <span class="number">90</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.brand-color &#123;</span><br><span class="line">  color: #409EFF;</span><br><span class="line">&#125;</span><br><span class="line">.success-color &#123;</span><br><span class="line">  color: #13ce66;</span><br><span class="line">&#125;</span><br><span class="line">.warning-color &#123;</span><br><span class="line">  color: #E6A23C;</span><br><span class="line">&#125;</span><br><span class="line">.danger-color &#123;</span><br><span class="line">  color: #F56C6C;</span><br><span class="line">&#125;</span><br><span class="line">.info-color &#123;</span><br><span class="line">  color: #909399;</span><br><span class="line">&#125;</span><br><span class="line">.normal-info-color &#123;</span><br><span class="line">  color: #606266;</span><br><span class="line">&#125;</span><br><span class="line">.deep-info-color &#123;</span><br><span class="line">  color: #303133;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// el.less</span></span><br><span class="line"><span class="comment">// el文字链接 字重</span></span><br><span class="line">.el-link--inner &#123;</span><br><span class="line">  font-size: <span class="number">12</span>px;</span><br><span class="line">  font-weight: <span class="number">400</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el表格</span></span><br><span class="line">.el-table &#123;</span><br><span class="line">  tr th,</span><br><span class="line">  tr td &#123;</span><br><span class="line">    padding: <span class="number">4</span>px;</span><br><span class="line">    font-size: <span class="number">12</span>px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el分页 外边距</span></span><br><span class="line">.el-pagination &#123;</span><br><span class="line">  margin-top: <span class="number">12</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el卡片 header内容位置、body内容位置</span></span><br><span class="line">.el-card &#123;</span><br><span class="line">  .el-card__header &#123;</span><br><span class="line">    padding: <span class="number">16</span>px <span class="number">20</span>px <span class="number">8</span>px;</span><br><span class="line">  &#125;</span><br><span class="line">  .el-card .el-card__body &#123;</span><br><span class="line">    padding: <span class="number">8</span>px <span class="number">20</span>px <span class="number">16</span>px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el多行文本 字数统计调整</span></span><br><span class="line">.el-textarea .el-input__count &#123;</span><br><span class="line">  bottom: <span class="number">-8</span>px !important;</span><br><span class="line">  background: transparent !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el日期选择器 选择范围时的分隔符宽度调整</span></span><br><span class="line">.el-range-separator &#123;</span><br><span class="line">  width: <span class="number">10</span>% !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el多选框 禁用状态 已选颜色加深</span></span><br><span class="line">.el-checkbox.is-disabled.is-checked &#123;</span><br><span class="line">  .el-checkbox__label &#123;</span><br><span class="line">    color: #606266;</span><br><span class="line">  &#125;</span><br><span class="line">  .el-checkbox__input.is-disabled.is-checked &#123;</span><br><span class="line">    .el-checkbox__inner &#123;</span><br><span class="line">      border-color: #606266;</span><br><span class="line">      &amp;::after &#123;</span><br><span class="line">        border-color: #606266;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el输入框、选择器</span></span><br><span class="line">.el-input__inner:hover,</span><br><span class="line">.el-textarea__inner:hover,</span><br><span class="line">.el-select:hover .el-input__inner &#123;</span><br><span class="line">  border-color: #409EFF;</span><br><span class="line">&#125;</span><br><span class="line">.el-input.is-disabled .el-input__inner,</span><br><span class="line">.el-textarea.is-disabled .el-textarea__inner &#123;</span><br><span class="line">  color: #606266 !important;</span><br><span class="line">  border: none !important;</span><br><span class="line">  cursor: <span class="keyword">default</span> !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el-upload 禁用状态 鼠标光标</span></span><br><span class="line">.upload-container.disabled &#123;</span><br><span class="line">  .el-upload &#123;</span><br><span class="line">    cursor: <span class="keyword">default</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  img &#123;</span><br><span class="line">    cursor: <span class="keyword">default</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// el菜单导航</span></span><br><span class="line">.el-menu &#123;</span><br><span class="line">  border-right: <span class="number">0</span> !important;</span><br><span class="line">  .el-submenu,</span><br><span class="line">  .el-menu-item &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-menu-item,</span><br><span class="line">.el-submenu__title &#123;</span><br><span class="line">  height: <span class="number">48</span>px !important;</span><br><span class="line">  line-height: <span class="number">48</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-submenu-level_2 .el-submenu__title &#123;</span><br><span class="line">  padding: <span class="number">0</span> <span class="number">20</span>px !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.el-menu-item &#123;</span><br><span class="line">  padding: <span class="number">0</span> <span class="number">20</span>px !important;</span><br><span class="line">  .fa-dot &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    margin-right: <span class="number">6</span>px;</span><br><span class="line">    width: <span class="number">24</span>px;</span><br><span class="line">    font-size: <span class="number">30</span>px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">    color: #909399;</span><br><span class="line">    &amp;:before &#123;</span><br><span class="line">      content: <span class="string">"\00b7"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;:hover .fa-dot &#123;</span><br><span class="line">    color: #EEE;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.el-menu-item.is-active .fa-dot &#123;</span><br><span class="line">  color: #409EFF;</span><br><span class="line">&#125;</span><br><span class="line">.el-submenu-level_1.is-active &gt; .el-submenu__title &#123;</span><br><span class="line">  i &#123;</span><br><span class="line">    color: #409EFF !important;</span><br><span class="line">  &#125;</span><br><span class="line">  svg &#123;</span><br><span class="line">    color: #409EFF !important;</span><br><span class="line">  &#125;</span><br><span class="line">  span &#123;</span><br><span class="line">    color: #409EFF !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.fa-diamond &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  margin-right: <span class="number">6</span>px;</span><br><span class="line">  width: <span class="number">24</span>px;</span><br><span class="line">  font-size: <span class="number">16</span>px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  vertical-align: top;</span><br><span class="line">  color: #909399;</span><br><span class="line">  transform-origin: center <span class="number">53</span>%;</span><br><span class="line">  transform: rotateZ(<span class="number">135</span>deg);</span><br><span class="line">  transition: all <span class="number">0.4</span>s linear;</span><br><span class="line">  &amp;:before &#123;</span><br><span class="line">    content: <span class="string">"\2724"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.el-submenu-level_2:hover .fa-diamond &#123;</span><br><span class="line">  color: #EEE;</span><br><span class="line">  transform: rotate(<span class="number">0</span>deg);</span><br><span class="line">&#125;</span><br><span class="line">.el-submenu-level_2.is-active .el-submenu__title &#123;</span><br><span class="line">  span &#123;</span><br><span class="line">    color: #409EFF !important;</span><br><span class="line">  &#125;</span><br><span class="line">  .fa-diamond &#123;</span><br><span class="line">    transform: rotate(<span class="number">0</span>deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、components"><a href="#4、components" class="headerlink" title="4、components"></a>4、components</h3><p>存放所有的组件（可复用组件、特殊封装组件）</p>
+<p>TheLayout.vue 组件参考：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"page"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"page-left-container"</span> :style=<span class="string">"&#123; width: siderWidth &#125;"</span>&gt;</span><br><span class="line">      &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"page-sidebar"</span>&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"sidebar-header"</span>&gt;</span><br><span class="line">          &lt;img <span class="class"><span class="keyword">class</span></span>=<span class="string">"sidebar-header-logo"</span> src=<span class="string">"@/assets/images/logo.png"</span> /&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div</span></span><br><span class="line"><span class="regexp">          class="sidebar-body"</span></span><br><span class="line"><span class="regexp">          :style="&#123; backgroundColor: navBackgroundColor &#125;"</span></span><br><span class="line"><span class="regexp">        &gt;</span></span><br><span class="line"><span class="regexp">          &lt;el-scrollbar class="scrollbar-section"&gt;</span></span><br><span class="line"><span class="regexp">            &lt;el-menu</span></span><br><span class="line"><span class="regexp">              :background-color="navBackgroundColor"</span></span><br><span class="line"><span class="regexp">              :text-color="navTextColor"</span></span><br><span class="line"><span class="regexp">              :active-text-color="navActiveTextColor"</span></span><br><span class="line"><span class="regexp">              :default-active="navDefaultActive"</span></span><br><span class="line"><span class="regexp">              :router="true"</span></span><br><span class="line"><span class="regexp">              :collapse="collapse"</span></span><br><span class="line"><span class="regexp">            &gt;</span></span><br><span class="line"><span class="regexp">              &lt;template v-for="route in navRoutes"&gt;</span></span><br><span class="line"><span class="regexp">                &lt;el-menu-item</span></span><br><span class="line"><span class="regexp">                  v-if="!haveChildren(route)"</span></span><br><span class="line"><span class="regexp">                  :key="route.name"</span></span><br><span class="line"><span class="regexp">                  :index="route.name"</span></span><br><span class="line"><span class="regexp">                  :route="&#123; name: route.name &#125;"</span></span><br><span class="line"><span class="regexp">                &gt;</span></span><br><span class="line"><span class="regexp">                  &lt;i</span></span><br><span class="line"><span class="regexp">                    v-if="route.meta.nav.icon"</span></span><br><span class="line"><span class="regexp">                    :class="route.meta.nav.icon"</span></span><br><span class="line"><span class="regexp">                  &gt;&lt;/i</span>&gt;</span><br><span class="line">                  &lt;icon-svg</span><br><span class="line">                    v-<span class="keyword">if</span>=<span class="string">"route.meta.nav.svg"</span></span><br><span class="line">                    :svg-<span class="class"><span class="keyword">class</span></span>=<span class="string">"route.meta.nav.svg.class"</span></span><br><span class="line">                    :svg-name=<span class="string">"route.meta.nav.svg.name"</span></span><br><span class="line">                  &gt;&lt;<span class="regexp">/icon-svg&gt;</span></span><br><span class="line"><span class="regexp">                  &lt;span slot="title"&gt;&#123;&#123; route.meta.nav.title &#125;&#125;&lt;/</span>span&gt;</span><br><span class="line">                &lt;<span class="regexp">/el-menu-item&gt;</span></span><br><span class="line"><span class="regexp">                &lt;el-submenu</span></span><br><span class="line"><span class="regexp">                  class="el-submenu-level_1"</span></span><br><span class="line"><span class="regexp">                  v-else</span></span><br><span class="line"><span class="regexp">                  :key="route.name"</span></span><br><span class="line"><span class="regexp">                  :index="route.name"</span></span><br><span class="line"><span class="regexp">                &gt;</span></span><br><span class="line"><span class="regexp">                  &lt;template slot="title"&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;i</span></span><br><span class="line"><span class="regexp">                      v-if="route.meta.nav.icon"</span></span><br><span class="line"><span class="regexp">                      :class="route.meta.nav.icon"</span></span><br><span class="line"><span class="regexp">                    &gt;&lt;/i</span>&gt;</span><br><span class="line">                    &lt;icon-svg</span><br><span class="line">                      v-<span class="keyword">if</span>=<span class="string">"route.meta.nav.svg"</span></span><br><span class="line">                      :svg-<span class="class"><span class="keyword">class</span></span>=<span class="string">"route.meta.nav.svg.class"</span></span><br><span class="line">                      :svg-name=<span class="string">"route.meta.nav.svg.name"</span></span><br><span class="line">                    &gt;&lt;<span class="regexp">/icon-svg&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;span&gt;&#123;&#123; route.meta.nav.title &#125;&#125;&lt;/</span>span&gt;</span><br><span class="line">                  &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">                  &lt;template v-for="item in route.children"&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;el-menu-item</span></span><br><span class="line"><span class="regexp">                      v-if="!haveChildren(item)"</span></span><br><span class="line"><span class="regexp">                      :key="item.name"</span></span><br><span class="line"><span class="regexp">                      :index="item.name"</span></span><br><span class="line"><span class="regexp">                      :route="&#123; name: item.name &#125;"</span></span><br><span class="line"><span class="regexp">                    &gt;</span></span><br><span class="line"><span class="regexp">                      &lt;span class="fa-dot"&gt;&lt;/</span>span&gt;</span><br><span class="line">                      &lt;span&gt;&#123;&#123; item.meta.nav.title &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;/</span>el-menu-item&gt;</span><br><span class="line">                    &lt;el-submenu</span><br><span class="line">                      <span class="class"><span class="keyword">class</span></span>=<span class="string">"el-submenu-level_2"</span></span><br><span class="line">                      v-<span class="keyword">else</span></span><br><span class="line">                      :key=<span class="string">"item.name"</span></span><br><span class="line">                      :index=<span class="string">"item.name"</span></span><br><span class="line">                    &gt;</span><br><span class="line">                      &lt;template slot=<span class="string">"title"</span>&gt;</span><br><span class="line">                        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa-diamond"</span>&gt;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">                        &lt;span&gt;&#123;&#123; item.meta.nav.title &#125;&#125;&lt;/</span>span&gt;</span><br><span class="line">                      &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">                      &lt;el-menu-item</span></span><br><span class="line"><span class="regexp">                        v-for="data in item.children"</span></span><br><span class="line"><span class="regexp">                        :key="data.name"</span></span><br><span class="line"><span class="regexp">                        :index="data.name"</span></span><br><span class="line"><span class="regexp">                        :route="&#123; name: data.name &#125;"</span></span><br><span class="line"><span class="regexp">                      &gt;</span></span><br><span class="line"><span class="regexp">                        &lt;span class="fa-dot"&gt;&lt;/</span>span&gt;</span><br><span class="line">                        &lt;span&gt;&#123;&#123; data.meta.nav.title &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">                      &lt;/</span>el-menu-item&gt;</span><br><span class="line">                    &lt;<span class="regexp">/el-submenu&gt;</span></span><br><span class="line"><span class="regexp">                  &lt;/</span>template&gt;</span><br><span class="line">                &lt;<span class="regexp">/el-submenu&gt;</span></span><br><span class="line"><span class="regexp">              &lt;/</span>template&gt;</span><br><span class="line">            &lt;<span class="regexp">/el-menu&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>el-scrollbar&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div class="sidebar-footer"&gt;</span></span><br><span class="line"><span class="regexp">          &lt;div class="collapse-icon-container" @click="handleCollapse"&gt;</span></span><br><span class="line"><span class="regexp">            &lt;img</span></span><br><span class="line"><span class="regexp">              class="collapse-icon"</span></span><br><span class="line"><span class="regexp">              :class="&#123; unfold: collapse &#125;"</span></span><br><span class="line"><span class="regexp">              src="@/</span>assets/images/fold.svg<span class="string">"</span></span><br><span class="line"><span class="string">            /&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class="</span>page-right-container<span class="string">"&gt;</span></span><br><span class="line"><span class="string">      &lt;div class="</span>page-header<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        &lt;div class="</span>page-header-left<span class="string">"&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div class="</span>page-header-middle<span class="string">"&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;el-dropdown style="</span>height: <span class="number">100</span>%<span class="string">" @command="</span>handleCommand<span class="string">"&gt;</span></span><br><span class="line"><span class="string">          &lt;div class="</span>page-header-right<span class="string">"&gt;</span></span><br><span class="line"><span class="string">            &lt;img v-if="</span>userAvatar<span class="string">" class="</span>user-avatar<span class="string">" :src="</span>userAvatar<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">            &lt;img</span></span><br><span class="line"><span class="string">              v-else</span></span><br><span class="line"><span class="string">              class="</span>user-avatar<span class="string">"</span></span><br><span class="line"><span class="string">              src="</span>@/assets/images/<span class="keyword">default</span>-avatar.png<span class="string">"</span></span><br><span class="line"><span class="string">            /&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="</span>user-name<span class="string">"&gt;&#123;&#123; userName &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;i class="</span>el-icon-arrow-down<span class="string">"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;el-dropdown-menu slot="</span>dropdown<span class="string">"&gt;</span></span><br><span class="line"><span class="string">            &lt;el-dropdown-item icon="</span>el-icon-video-pause<span class="string">" command="</span>handleLogout<span class="string">"</span></span><br><span class="line"><span class="string">              &gt;登出&lt;/el-dropdown-item</span></span><br><span class="line"><span class="string">            &gt;</span></span><br><span class="line"><span class="string">          &lt;/el-dropdown-menu&gt;</span></span><br><span class="line"><span class="string">        &lt;/el-dropdown&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">      &lt;div class="</span>page-content<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        &lt;el-scrollbar class="</span>scrollbar-section<span class="string">"&gt;</span></span><br><span class="line"><span class="string">          &lt;router-view /&gt;</span></span><br><span class="line"><span class="string">        &lt;/el-scrollbar&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">import &#123; mapState &#125; from "</span>vuex<span class="string">";</span></span><br><span class="line"><span class="string">import routesAll from "</span>@/router/routes<span class="string">";</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">  data() &#123;</span></span><br><span class="line"><span class="string">    return &#123;</span></span><br><span class="line">      navBackgroundColor: "#141f29",</span><br><span class="line">      navTextColor: <span class="string">"#EEE"</span>,</span><br><span class="line">      navActiveTextColor: <span class="string">""</span>,</span><br><span class="line">      navDefaultActive: <span class="keyword">this</span>.$route.name,</span><br><span class="line">      navRoutes: [],</span><br><span class="line">      collapse: <span class="literal">false</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    ...mapState([<span class="string">"userAvatar"</span>, <span class="string">"userName"</span>, <span class="string">"authPermissions"</span>]),</span><br><span class="line">    siderWidth() &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.collapse ? <span class="string">"64px"</span> : <span class="string">"227px"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created() &#123;</span><br><span class="line">    <span class="keyword">this</span>.getRoutes();</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    getRoutes() &#123;</span><br><span class="line">      <span class="keyword">let</span> resultRoutes = <span class="keyword">this</span>.filterPermissionRoutes(</span><br><span class="line">        routesAll,</span><br><span class="line">        <span class="keyword">this</span>.authPermissions</span><br><span class="line">      );</span><br><span class="line">      <span class="keyword">this</span>.navRoutes = <span class="keyword">this</span>.filterRoutes(resultRoutes);</span><br><span class="line">    &#125;,</span><br><span class="line">    filterPermissionRoutes(routes, permissions) &#123;</span><br><span class="line">      <span class="keyword">const</span> filterRoutes = [];</span><br><span class="line">      routes.forEach(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> route = &#123; ...data &#125;;</span><br><span class="line">        <span class="keyword">const</span> notPermission = !route.permission;</span><br><span class="line">        <span class="keyword">const</span> hasPermission = permissions.includes(route.permission);</span><br><span class="line">        <span class="keyword">const</span> passPermission = notPermission || hasPermission;</span><br><span class="line">        <span class="keyword">let</span> hasPath = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (route.children) &#123;</span><br><span class="line">          route.children = <span class="keyword">this</span>.filterPermissionRoutes(</span><br><span class="line">            data.children,</span><br><span class="line">            permissions</span><br><span class="line">          );</span><br><span class="line">          <span class="keyword">if</span> (route.children.length === <span class="number">0</span>) &#123;</span><br><span class="line">            hasPath = <span class="literal">false</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (passPermission &amp;&amp; hasPath) &#123;</span><br><span class="line">          filterRoutes.push(route);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> filterRoutes;</span><br><span class="line">    &#125;,</span><br><span class="line">    filterRoutes(routes) &#123;</span><br><span class="line">      <span class="keyword">let</span> result = [];</span><br><span class="line">      routes.forEach(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (data.meta &amp;&amp; data.meta.nav) &#123;</span><br><span class="line">          <span class="keyword">let</span> item = &#123;</span><br><span class="line">            name: data.name,</span><br><span class="line">            meta: data.meta</span><br><span class="line">          &#125;;</span><br><span class="line">          <span class="keyword">if</span> (data.children) &#123;</span><br><span class="line">            item.children = <span class="keyword">this</span>.filterRoutes(data.children);</span><br><span class="line">          &#125;</span><br><span class="line">          result.push(item);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data.children) &#123;</span><br><span class="line">          <span class="keyword">this</span>.filterRoutes(data.children).forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">            result.push(item);</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> result;</span><br><span class="line">    &#125;,</span><br><span class="line">    haveChildren(route) &#123;</span><br><span class="line">      <span class="keyword">let</span> children = route.children || [];</span><br><span class="line">      <span class="keyword">return</span> children.length;</span><br><span class="line">    &#125;,</span><br><span class="line">    handleCollapse() &#123;</span><br><span class="line">      <span class="keyword">this</span>.collapse = !<span class="keyword">this</span>.collapse;</span><br><span class="line">    &#125;,</span><br><span class="line">    handleCommand(command) &#123;</span><br><span class="line">      <span class="keyword">this</span>[command]();</span><br><span class="line">    &#125;,</span><br><span class="line">    handleLogout() &#123;</span><br><span class="line">      <span class="keyword">this</span>.$store.dispatch(<span class="string">"logout"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style lang="less"&gt;</span></span><br><span class="line"><span class="regexp">.page &#123;</span></span><br><span class="line"><span class="regexp">  .scrollbar-section &#123;</span></span><br><span class="line"><span class="regexp">    height: 100%;</span></span><br><span class="line"><span class="regexp">    .el-scrollbar__wrap &#123;</span></span><br><span class="line"><span class="regexp">      overflow-x: auto;</span></span><br><span class="line"><span class="regexp">      min-height: 100%;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    .el-scrollbar__view &#123;</span></span><br><span class="line"><span class="regexp">      min-height: 100%;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br><span class="line">&lt;style lang=<span class="string">"less"</span> scoped&gt;</span><br><span class="line">.nav-svg &#123;</span><br><span class="line">  margin-right: <span class="number">5</span>px;</span><br><span class="line">  width: <span class="number">24</span>px;</span><br><span class="line">  height: <span class="number">18</span>px;</span><br><span class="line">  vertical-align: middle;</span><br><span class="line">  color: #909399;</span><br><span class="line">&#125;</span><br><span class="line">.page &#123;</span><br><span class="line">  height: <span class="number">100</span>vh;</span><br><span class="line">  display: flex;</span><br><span class="line">  .page-left-container &#123;</span><br><span class="line">    z-index: <span class="number">101</span>;</span><br><span class="line">    flex: none;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    width: <span class="number">246</span>px;</span><br><span class="line">    transition: all <span class="number">0.2</span>s ease-out;</span><br><span class="line">    .page-sidebar &#123;</span><br><span class="line">      flex: <span class="number">1</span>;</span><br><span class="line">      display: flex;</span><br><span class="line">      flex-direction: column;</span><br><span class="line">      .sidebar-header &#123;</span><br><span class="line">        z-index: <span class="number">102</span>;</span><br><span class="line">        flex: none;</span><br><span class="line">        height: <span class="number">48</span>px;</span><br><span class="line">        background: #fff;</span><br><span class="line">        .sidebar-header-logo &#123;</span><br><span class="line">          margin: <span class="number">8</span>px <span class="number">12</span>px <span class="number">8</span>px <span class="number">20</span>px;</span><br><span class="line">          height: <span class="number">32</span>px;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      .sidebar-body &#123;</span><br><span class="line">        flex: <span class="number">1</span>;</span><br><span class="line">        height: <span class="number">0</span>;</span><br><span class="line">        overflow: auto;</span><br><span class="line">        box-shadow: <span class="number">2</span>px <span class="number">2</span>px <span class="number">6</span>px rgba(<span class="number">0</span>, <span class="number">21</span>, <span class="number">41</span>, <span class="number">0.35</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      .sidebar-footer &#123;</span><br><span class="line">        flex: none;</span><br><span class="line">        padding: <span class="number">8</span>px;</span><br><span class="line">        height: <span class="number">48</span>px;</span><br><span class="line">        background: #141f29;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">        box-shadow: <span class="number">2</span>px <span class="number">0</span> <span class="number">6</span>px rgba(<span class="number">0</span>, <span class="number">21</span>, <span class="number">41</span>, <span class="number">0.35</span>);</span><br><span class="line">        .collapse-icon-container &#123;</span><br><span class="line">          height: <span class="number">32</span>px;</span><br><span class="line">          text-align: center;</span><br><span class="line">          background-color: #1d2b3a;</span><br><span class="line">          border-radius: <span class="number">3</span>px;</span><br><span class="line">          cursor: pointer;</span><br><span class="line">          &amp;:hover &#123;</span><br><span class="line">            background-color: #273849;</span><br><span class="line">          &#125;</span><br><span class="line">          .collapse-icon &#123;</span><br><span class="line">            margin-top: <span class="number">6</span>px;</span><br><span class="line">            width: <span class="number">20</span>px;</span><br><span class="line">            height: <span class="number">20</span>px;</span><br><span class="line">            transition: all <span class="number">0.2</span>s ease-out;</span><br><span class="line">            &amp;.unfold &#123;</span><br><span class="line">              transform: rotate(<span class="number">-180</span>deg);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  .page-right-container &#123;</span><br><span class="line">    flex: <span class="number">1</span>;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    min-width: <span class="number">1000</span>px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    .page-header &#123;</span><br><span class="line">      z-index: <span class="number">100</span>;</span><br><span class="line">      display: flex;</span><br><span class="line">      justify-content: space-between;</span><br><span class="line">      padding: <span class="number">0</span> <span class="number">20</span>px;</span><br><span class="line">      height: <span class="number">48</span>px;</span><br><span class="line">      font-size: <span class="number">12</span>px;</span><br><span class="line">      line-height: <span class="number">48</span>px;</span><br><span class="line">      font-weight: <span class="number">400</span>;</span><br><span class="line">      color: #606266;</span><br><span class="line">      background: #fff;</span><br><span class="line">      box-shadow: <span class="number">0</span> <span class="number">1</span>px <span class="number">2</span>px <span class="number">0</span> rgba(<span class="number">9</span>, <span class="number">18</span>, <span class="number">26</span>, <span class="number">0.06</span>),</span><br><span class="line">        <span class="number">0</span> <span class="number">4</span>px <span class="number">8</span>px <span class="number">0</span> rgba(<span class="number">39</span>, <span class="number">56</span>, <span class="number">73</span>, <span class="number">0.08</span>);</span><br><span class="line">      .page-header-right &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">        align-items: center;</span><br><span class="line">        padding: <span class="number">0</span> <span class="number">10</span>px;</span><br><span class="line">        height: <span class="number">100</span>%;</span><br><span class="line">        transition: all <span class="number">0.2</span>s ease;</span><br><span class="line">        cursor: pointer;</span><br><span class="line">        &amp;:hover &#123;</span><br><span class="line">          background: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.025</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        .user-avatar &#123;</span><br><span class="line">          margin: <span class="number">0</span> <span class="number">8</span>px;</span><br><span class="line">          width: <span class="number">30</span>px;</span><br><span class="line">          height: <span class="number">30</span>px;</span><br><span class="line">          object-fit: cover;</span><br><span class="line">          border-radius: <span class="number">50</span>%;</span><br><span class="line">        &#125;</span><br><span class="line">        .user-name &#123;</span><br><span class="line">          margin-right: <span class="number">8</span>px;</span><br><span class="line">          font-size: <span class="number">12</span>px;</span><br><span class="line">          vertical-align: middle;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    .page-content &#123;</span><br><span class="line">      position: relative;</span><br><span class="line">      flex: <span class="number">1</span>;</span><br><span class="line">      overflow-y: auto;</span><br><span class="line">      background: #f0f2f5;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>面包屑 BreadCrumb.vue 组件参考：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"breadcrumb-section"</span>&gt;</span><br><span class="line">    &lt;el-breadcrumb</span><br><span class="line">      <span class="class"><span class="keyword">class</span></span>=<span class="string">"breadcrumb-list"</span></span><br><span class="line">      v-<span class="keyword">if</span>=<span class="string">"breadcrumbValue.length"</span></span><br><span class="line">      separator-<span class="class"><span class="keyword">class</span></span>=<span class="string">"el-icon-arrow-right"</span></span><br><span class="line">    &gt;</span><br><span class="line">      &lt;template v-<span class="keyword">for</span>=<span class="string">"(item, index) in breadcrumbValue"</span>&gt;</span><br><span class="line">        &lt;el-breadcrumb-item</span><br><span class="line">          v-<span class="keyword">if</span>=<span class="string">"item.to"</span></span><br><span class="line">          :to=<span class="string">"item.to"</span></span><br><span class="line">          :key=<span class="string">"index"</span></span><br><span class="line">          :replace=<span class="string">"true"</span></span><br><span class="line">          &gt;&#123;&#123; item.name &#125;&#125;&lt;<span class="regexp">/el-breadcrumb-item</span></span><br><span class="line"><span class="regexp">        &gt;</span></span><br><span class="line"><span class="regexp">        &lt;el-breadcrumb-item v-else :key="item.name"&gt;&#123;&#123;</span></span><br><span class="line"><span class="regexp">          item.name</span></span><br><span class="line"><span class="regexp">        &#125;&#125;&lt;/</span>el-breadcrumb-item&gt;</span><br><span class="line">      &lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>el-breadcrumb&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    breadcrumb: &#123;</span><br><span class="line">      type: <span class="built_in">Array</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="function"><span class="params">()</span> =&gt;</span> []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    breadcrumbValue() &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; breadcrumb &#125; = <span class="keyword">this</span>;</span><br><span class="line">      <span class="keyword">if</span> (breadcrumb.length) &#123;</span><br><span class="line">        <span class="keyword">return</span> breadcrumb;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.$route.matched</span><br><span class="line">        .filter(<span class="function"><span class="params">data</span> =&gt;</span> data.meta &amp;&amp; data.meta.breadcrumb)</span><br><span class="line">        .map(<span class="function"><span class="params">data</span> =&gt;</span> (&#123;</span><br><span class="line">          name: data.meta.breadcrumb.title,</span><br><span class="line">          to: data.meta.breadcrumb.replace ? &#123; <span class="attr">name</span>: data.name &#125; : <span class="literal">undefined</span></span><br><span class="line">        &#125;));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style lang="less" scoped&gt;</span></span><br><span class="line"><span class="regexp">.el-breadcrumb &#123;</span></span><br><span class="line"><span class="regexp">  margin-left: 4px;</span></span><br><span class="line"><span class="regexp">  margin-bottom: 12px;</span></span><br><span class="line"><span class="regexp">  font-size: 12px;</span></span><br><span class="line"><span class="regexp">  line-height: 16px;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、plugins"><a href="#5、plugins" class="headerlink" title="5、plugins"></a>5、plugins</h3><p>存放所有与 devDependencies 相关的插件（如 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#T4Cvnh" target="_blank" rel="noopener">svg-sprite-loader</a>）</p>
+<h3 id="6、router"><a href="#6、router" class="headerlink" title="6、router"></a>6、router</h3><p>路由分离，路由运行与路由结构分离成 index.js 与 routes.js，路由结构可根据菜单模块进一步分离，分离后的文件名均加上 routes 前缀：</p>
+<p><img src="/2020/08/13/specification/router.png" alt></p>
+<p>index.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">"vue-router"</span>;</span><br><span class="line"><span class="keyword">import</span> routes <span class="keyword">from</span> <span class="string">"./routes"</span>;</span><br><span class="line"><span class="keyword">import</span> NProgress <span class="keyword">from</span> <span class="string">"nprogress"</span>;                  <span class="comment">// 引入 NProgress</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"nprogress/nprogress.css"</span>;                   <span class="comment">// 引用 NProgress 样式</span></span><br><span class="line"><span class="keyword">import</span> userService <span class="keyword">from</span> <span class="string">"@/global/service/user"</span>;    <span class="comment">// 引入封装好的 user 请求</span></span><br><span class="line"><span class="keyword">import</span> Store <span class="keyword">from</span> <span class="string">"@/store/index"</span>;                  <span class="comment">// 引入 全局 store</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">"history"</span>,                                  <span class="comment">// 使用路由的 history 模式</span></span><br><span class="line">  routes                                            <span class="comment">// 路由的结构分离到 routes 文件</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.firstInit = <span class="literal">false</span>;                           <span class="comment">// 用于判断是否第一次渲染</span></span><br><span class="line"></span><br><span class="line">router.beforeEach(<span class="keyword">async</span> (to, <span class="keyword">from</span>, next) =&gt; &#123;</span><br><span class="line">  NProgress.start();                                    <span class="comment">// NProgress 的使用</span></span><br><span class="line">  <span class="keyword">if</span> (to.meta.title) <span class="built_in">document</span>.title = to.meta.title;    <span class="comment">// 页面标题</span></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> TOKEN = localStorage.getItem(<span class="string">"admin_token"</span>);</span><br><span class="line">    <span class="keyword">if</span> (!TOKEN &amp;&amp; to.name !== <span class="string">"AccountLogin"</span>) &#123;</span><br><span class="line">      next(&#123; <span class="attr">name</span>: <span class="string">"AccountLogin"</span>, <span class="attr">replace</span>: <span class="literal">true</span> &#125;);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (TOKEN &amp;&amp; to.name === <span class="string">"AccountLogin"</span>) &#123;</span><br><span class="line">      next(&#123; <span class="attr">name</span>: <span class="string">"Home"</span>, <span class="attr">replace</span>: <span class="literal">true</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!router.firstInit &amp;&amp; TOKEN) &#123;</span><br><span class="line">      router.firstInit = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">const</span> userInfo = <span class="keyword">await</span> userService.info();        <span class="comment">// 初次渲染时将用户基本信息</span></span><br><span class="line">      Store.commit(<span class="string">"getUserAvatar"</span>, userInfo.avatar);   <span class="comment">// 和所拥有的权限存入 store</span></span><br><span class="line">      Store.commit(<span class="string">"getUserName"</span>, userInfo.name);</span><br><span class="line">      Store.commit(<span class="string">"getAuthPermissions"</span>, userInfo.permissions);</span><br><span class="line">    &#125;</span><br><span class="line">    next();</span><br><span class="line">  &#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.afterEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  NProgress.done();                                     <span class="comment">// NProgress 的使用</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure>
+
+<p>routes：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> routesHome <span class="keyword">from</span> <span class="string">"./routesHome"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TheLayout <span class="keyword">from</span> <span class="string">"@/components/TheLayout.vue"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [</span><br><span class="line">  &#123;</span><br><span class="line">    path: <span class="string">"/admin"</span>,</span><br><span class="line">    component: TheLayout,</span><br><span class="line">    redirect: &#123; <span class="attr">name</span>: <span class="string">"Home"</span> &#125;,</span><br><span class="line">    children: [...routesHome]</span><br><span class="line">  &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>根据菜单导航进一步分离出来的路由结构详见 <a href="https://jiker.feishu.cn/docs/doccnoTWZhs7J9TfPq7BEgn1wkg#0lB8k5" target="_blank" rel="noopener">Demo</a>。</p>
+<h3 id="7、store"><a href="#7、store" class="headerlink" title="7、store"></a>7、store</h3><p>存放全局信息、方法（一般为用户基本信息与用户权限）</p>
+<h3 id="8、views"><a href="#8、views" class="headerlink" title="8、views"></a>8、views</h3><p>存放所有页面，注意命名规范，可参考 <a href="https://cn.vuejs.org/v2/style-guide" target="_blank" rel="noopener">vue 风格指南</a></p>
+<p><img src="/2020/08/13/specification/views.png" alt></p>
+<p>页面 script 中 export default 选项顺序：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">  props: &#123;&#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;&#125;,</span><br><span class="line">  created() &#123;&#125;,</span><br><span class="line">  mounted() &#123;&#125;,</span><br><span class="line">  watch: &#123;&#125;,</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9、utils"><a href="#9、utils" class="headerlink" title="9、utils"></a>9、utils</h3><p>存放一些小工具小功能小方法，如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> formatTime = <span class="function"><span class="params">timestamp</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timestamp);</span><br><span class="line">  <span class="keyword">const</span> year = date.getFullYear();</span><br><span class="line">  <span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> day = date.getDate();</span><br><span class="line">  <span class="keyword">const</span> hour = date.getHours();</span><br><span class="line">  <span class="keyword">const</span> minute = date.getMinutes();</span><br><span class="line">  <span class="keyword">const</span> second = date.getSeconds();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    [year, month, day].map(formatNumber).join(<span class="string">"/"</span>) +</span><br><span class="line">    <span class="string">" "</span> +</span><br><span class="line">    [hour, minute, second].map(formatNumber).join(<span class="string">":"</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> formatNumber = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  n = n.toString();</span><br><span class="line">  <span class="keyword">return</span> n[<span class="number">1</span>] ? n : <span class="string">"0"</span> + n;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> formateDay = <span class="function"><span class="params">timestamp</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timestamp);</span><br><span class="line">  <span class="keyword">const</span> year = date.getFullYear();</span><br><span class="line">  <span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> day = date.getDate();</span><br><span class="line">  <span class="keyword">return</span> [year, month, day].map(formatNumber).join(<span class="string">"-"</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  formatTime: formatTime,</span><br><span class="line">  formateDay: formateDay</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>五、Demo</p>
+<p><a href="https://github.com/WinstonYa/vue-admin-framework" target="_blank" rel="noopener">github 传送门</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的鼓励就是我前进的动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Winston Wong WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Winston Wong Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%89%8D%E7%AB%AF%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/" rel="tag"># 前端风格规范</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/12/git-update/" rel="next" title="git升级方法">
+                <i class="fa fa-chevron-left"></i> git升级方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Winston Wong" />
+            
+              <p class="site-author-name" itemprop="name">Winston Wong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/WinstonYa" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2215444192@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端风格规范"><span class="nav-number">1.</span> <span class="nav-text">前端风格规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、框架的选择"><span class="nav-number">1.1.</span> <span class="nav-text">一、框架的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、配置-commitlint"><span class="nav-number">1.2.</span> <span class="nav-text">二、配置 commitlint</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、选配依赖包"><span class="nav-number">1.3.</span> <span class="nav-text">三、选配依赖包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、element-ui"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、element-ui</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、nprogress"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、nprogress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、svg-sprite-loader"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、svg-sprite-loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、vue-i18n"><span class="nav-number">1.3.4.</span> <span class="nav-text">4、vue-i18n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、axios"><span class="nav-number">1.3.5.</span> <span class="nav-text">5、axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、src-目录架构"><span class="nav-number">1.3.6.</span> <span class="nav-text">四、src 目录架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、main-js"><span class="nav-number">1.3.7.</span> <span class="nav-text">1、main.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、App-vue"><span class="nav-number">1.3.8.</span> <span class="nav-text">2、App.vue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、assets"><span class="nav-number">1.3.9.</span> <span class="nav-text">3、assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、components"><span class="nav-number">1.3.10.</span> <span class="nav-text">4、components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、plugins"><span class="nav-number">1.3.11.</span> <span class="nav-text">5、plugins</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、router"><span class="nav-number">1.3.12.</span> <span class="nav-text">6、router</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、store"><span class="nav-number">1.3.13.</span> <span class="nav-text">7、store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、views"><span class="nav-number">1.3.14.</span> <span class="nav-text">8、views</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、utils"><span class="nav-number">1.3.15.</span> <span class="nav-text">9、utils</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Winston Wong</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">8.2k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'lkqk7sYTrSIf3xHlC0S6w3Ie-gzGzoHsz',
+        appKey: 'XoUChlUWABcK3dbXQviNhKyW',
+        placeholder: '欢迎留言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("lkqk7sYTrSIf3xHlC0S6w3Ie-gzGzoHsz", "XoUChlUWABcK3dbXQviNhKyW");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
