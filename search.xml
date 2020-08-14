@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Vue-lifecycle</title>
-    <url>/2020/07/09/Vue-lifecycle/</url>
-    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
-<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
-<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
-<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
-<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
-<p>mounted // 调用该生命周期前已渲染真实节点</p>
-<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
-<p>updated // 已调用render函数重新渲染</p>
-<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
-<p>deactivated // keep-alive缓存组件销毁后调用</p>
-<p>beforeDestroy</p>
-<p>destroyed</p>
-<p>errorCaptured</p>
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单实现Node的Events模块</title>
-    <url>/2020/07/02/Node-Events/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端面试题</category>
-        <category>面试题汇总</category>
-      </categories>
-      <tags>
-        <tag>前端面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>判断js类型的方式</title>
     <url>/2020/05/26/Javascript_type/</url>
     <content><![CDATA[<h3 id="第一种方式：typeof"><a href="#第一种方式：typeof" class="headerlink" title="第一种方式：typeof"></a>第一种方式：typeof</h3><p><strong>【语法】</strong></p>
@@ -124,14 +85,42 @@
       </tags>
   </entry>
   <entry>
-    <title>git升级方法</title>
-    <url>/2020/07/12/git-update/</url>
-    <content><![CDATA[<h2 id="本地打开Git，输入git-update-git-for-windows"><a href="#本地打开Git，输入git-update-git-for-windows" class="headerlink" title="本地打开Git，输入git update-git-for-windows"></a>本地打开Git，输入<code>git update-git-for-windows</code></h2>]]></content>
+    <title>简单实现Node的Events模块</title>
+    <url>/2020/07/02/Node-Events/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEmitter</span> <span class="keyword">extends</span> <span class="title">EventEmitter</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> MyEmitter();</span><br><span class="line">myEmitter.on(<span class="string">'event'</span>, () =&gt; &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'an event occurred'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">myEmitter.emit(<span class="string">'event'</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
-        <category>git</category>
+        <category>前端面试题</category>
+        <category>面试题汇总</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue-lifecycle</title>
+    <url>/2020/07/09/Vue-lifecycle/</url>
+    <content><![CDATA[<h1 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h1><p><strong>vue生命周期：从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！</strong></p>
+<p><img src="/2020/07/09/Vue-lifecycle/vue_lifecycle.png" alt></p>
+<p>beforeCreate // 调用该生命周期前已初始化生命周期，事件和渲染函数，不能访问到props等属性</p>
+<p>created // 调用该生命周期前已顺序初始化具体的数据—— injections =&gt; props =&gt; methods =&gt; data =&gt; computed =&gt; watch =&gt; initProvide</p>
+<p>beforeMount // 调用该生命周期前已初始化渲染函数$options.render</p>
+<p>mounted // 调用该生命周期前已渲染真实节点</p>
+<p>beforeUpdate // 状态改变时，会在nextTick中更新视图前调用</p>
+<p>updated // 已调用render函数重新渲染</p>
+<p>activated // keep-alive缓存组件渲染时调用(mounted前会渲染一次，每次updated前也会渲染一次)</p>
+<p>deactivated // keep-alive缓存组件销毁后调用</p>
+<p>beforeDestroy</p>
+<p>destroyed</p>
+<p>errorCaptured</p>
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
       </tags>
   </entry>
   <entry>
@@ -177,6 +166,17 @@
       </categories>
       <tags>
         <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git升级方法</title>
+    <url>/2020/07/12/git-update/</url>
+    <content><![CDATA[<h2 id="本地打开Git，输入git-update-git-for-windows"><a href="#本地打开Git，输入git-update-git-for-windows" class="headerlink" title="本地打开Git，输入git update-git-for-windows"></a>本地打开Git，输入<code>git update-git-for-windows</code></h2>]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -332,28 +332,22 @@
 <p>否则选“手动选择特性”（Manually select features）来选取需要的特性，步骤如下：</p>
 <ol>
 <li><p>Check the features needed for your project：</p>
+<p>​    Babel</p>
+<p>​    Router</p>
+<p>​    Vuex</p>
+<p>​    CSS Pre-processors</p>
+<p>​    Linter / Formatter</p>
+<p>​    Unit Testing</p>
 </li>
-<li><p>Babel</p>
+<li><p>Use history mode for router?           Y</p>
 </li>
-<li><p>Router</p>
-</li>
-<li><p>Vuex</p>
-</li>
-<li><p>CSS Pre-processors</p>
-</li>
-<li><p>Linter / Formatter</p>
-</li>
-<li><p>Unit Testing</p>
-</li>
-<li><p>Use history mode for router?         Y</p>
-</li>
-<li><p>Pick a CSS pre-processor：          Less</p>
+<li><p>Pick a CSS pre-processor：               Less</p>
 </li>
 <li><p>Pick a linter / formatter config：      ESLint + Prettier</p>
 </li>
-<li><p>Pick additional lint features：         Lint on save，Lint and fix on commit</p>
+<li><p>Pick additional lint features：           Lint on save，Lint and fix on commit</p>
 </li>
-<li><p>Pick a unit testing solution：         Jest</p>
+<li><p>Pick a unit testing solution：             Jest</p>
 </li>
 </ol>
 <p>过程图如下：</p>
